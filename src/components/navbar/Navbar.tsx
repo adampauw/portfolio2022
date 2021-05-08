@@ -6,22 +6,33 @@ import styled from '@emotion/styled';
 export const Navbar: FC = (props: any) => {
 
   const NavbarContainer = styled.div `
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 90%;
-    padding-top: 1em;
-    margin-right: 2%;
-    @media (max-width: 768px) {
-      left: 85%;
-    }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #0000;
   ` 
   return(
     <NavbarContainer>
-      <NavbarLink text="Blog" to="#"/>
-      <NavbarLink text="About" to="#"/>
-      <NavbarLink text="Contact" to="#"/>
+      <NavbarLink text="Xpeeriance" to="#"/>
+      <NavbarLink text="Tasks" to="#"/>
     </NavbarContainer>
   )
 };

@@ -19,24 +19,10 @@
 // Mobile
 
 .App {
-  .logo svg {
-    @media(min-width: 768px) {
-      top: 55%;
-      left: 75%;
-      height: 50%;
-      margin-top: -25%;
-    }
-    @media(min-width: 1024px) {
-      top: 75%;
-    }
-    @media(min-width: 1440px) {
-      top: 80%;
-      height: 60%;
-    }
-    @media(min-width: 2560px) {
-      top: 115%;
-      height: 80%;
-    }
+  .header-img svg {
+    width: 70%;
+    height: auto;
+    margin-bottom: 40px;
   }
 }
 
