@@ -7,7 +7,6 @@ import Overlay from "./components/header/Overlay";
 import { Blog } from "./components/blog/Blog";
 import FancyButton from "./components/header/FancyButton";
 import "./App.scss";
-import { SvgIcon } from "./components/helper/SVGicon";
 import { isMobile } from "./components/helper/deviceDetect";
 
 const App: React.FC = () => {
@@ -30,7 +29,6 @@ const App: React.FC = () => {
           <NavbarMobile /> :
           <Navbar />
         }
-        <SvgIcon src='/img/butterchalk_logo.svg' cssClass="logo" color="black" />
         <Overlay width={100} height={600} position={0} />
         <Overlay width={20} height={600} position={120} />
       </Background>
