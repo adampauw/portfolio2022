@@ -30,7 +30,7 @@ export const Header = (props: any) => {
       <Title>
         Gain real world marketable experience while improving your skills
       </Title>
-      <SvgIcon src='/img/stairs.svg' cssClass='header-img'/>
+      <SvgIcon src='/img/stairs.svg' cssClass='header-img' stroke='none'/>
     </Header>
   );
 };
