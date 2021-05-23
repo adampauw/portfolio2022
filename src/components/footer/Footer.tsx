@@ -12,21 +12,27 @@ export const Footer = (props: any) => {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 60px;
-    padding: 80px 60px 60px;
+    margin: 55px;
+    padding: 40px 60px;
     border-radius: 8px;
     background-image: linear-gradient(127deg,#00aa9b,#008b78);
+    @media(max-width: 767px) {
+      margin: 5px;
+      padding: 30px 40px;
+    }
   `;
 
   const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: left;
   `;
 
   const Title = styled.h1`
     color: white;
+    @media(max-width: 767px) {
+      font-size: 20px;
+    }
   `;
 
   const Text = styled.a`
@@ -57,7 +63,11 @@ export const Footer = (props: any) => {
         FAQ
       </Text>
       </TextContainer>
-      <SvgIcon src='/img/team.svg' stroke='none'/>
+      <SvgIcon 
+        src='/img/team.svg'
+        stroke='none'
+        cssClass='footer-img clear-mobile'
+      />
     </Footer>
   );
 };

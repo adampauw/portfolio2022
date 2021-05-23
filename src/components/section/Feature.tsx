@@ -28,10 +28,10 @@ export const Feature = (props: FeatureProps) => {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-    @media(max-width: 768px) {
+    @media(max-width: 767px) {
       margin-top: 30px;
-      padding-right: 40px;
-      padding-left: 40px;
+      padding-right: 10px;
+      padding-left: 10px;
     }
   `
 

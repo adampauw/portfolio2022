@@ -20,9 +20,18 @@ export const VisualContainer = (props: VisualProps) => {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    width: 50%;
     & > img {
       width: 100%;
     }
+    @media(max-width: 990px) {
+      position: absolute;
+      padding: 10px;
+      opacity: .1;
+      z-index: -1;
+      width: 80%;
+    }
+
   `;
 
   return (

@@ -2,7 +2,7 @@
   text-align: center;
   overflow: hidden;
   .Content {
-    padding: 5px;
+    padding: 15px;
   }
   .logo svg {
     position: absolute;
@@ -14,6 +14,12 @@
     margin-top: -30%;
     opacity: 0.9;
   }
+
+  .clear-mobile {
+    @media(max-width: 767px) {
+      display: none;
+    }
+  }
 }
 
 // Mobile
@@ -23,6 +29,10 @@
     width: 70%;
     height: auto;
     margin-bottom: 40px;
+  }
+  .footer-img svg {
+    width: 90%;
+    height: auto;
   }
 }
 

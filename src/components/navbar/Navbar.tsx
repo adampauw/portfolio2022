@@ -28,6 +28,9 @@ export const Navbar: FC = (props: any) => {
   -ms-flex-align: center;
   align-items: center;
   background-color: #0000;
+  @media(max-width: 425px) {
+    padding-top: 0;
+  }
   ` 
   return(
     <NavbarContainer>

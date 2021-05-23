@@ -1,9 +1,7 @@
 /* @jsx jsx */
 import React from "react";
 import styled from "@emotion/styled";
-import NavbarMobile from "../navbar/NavbarMobile";
 import { Navbar } from "../navbar/Navbar";
-import { isMobile } from "../helper/deviceDetect";
 import { SvgIcon } from "../helper/SVGicon";
 import { css, jsx } from "@emotion/core";
 
@@ -11,7 +9,12 @@ export const Header = (props: any) => {
   const Header = styled.div`
     position: relative;
     background-color: #ebebeb;
-    padding: 0 100px;
+    padding: 0 60px;
+    @media (max-width: 767px) {
+      padding 30px 15px;
+      background-image: url(/img/stairs.svg);
+      background-position: unset;
+    }
   `;
 
   const Title = styled.h1`
@@ -22,15 +25,19 @@ export const Header = (props: any) => {
     font-weight: 600;
     text-align: center;
     width: 90%;
+    @media (max-width: 767px) {
+      font-size: 35px;
+      margin: 70px auto 40px;
+    }
   `;
 
   return (
     <Header>
-      {isMobile() ? <NavbarMobile /> : <Navbar />}
+      <Navbar />
       <Title>
-        Gain real world marketable experience while improving your skills
+        Gain real world experience while improving your skills
       </Title>
-      <SvgIcon src='/img/stairs.svg' cssClass='header-img' stroke='none'/>
+        <SvgIcon src="/img/stairs.svg" cssClass="header-img clear-mobile" stroke="none" />
     </Header>
   );
 };

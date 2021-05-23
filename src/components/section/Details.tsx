@@ -23,6 +23,10 @@ export const DetailsContainer = (props: DetailsProps) => {
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
+    @media(max-width: 990px) {
+      width: 100%;
+    }
+
   `;
 
   const TextContainer = styled.div`
@@ -70,6 +74,9 @@ export const DetailsContainer = (props: DetailsProps) => {
     line-height: 46px;
     font-weight: 600;
     text-align: left;
+    @media(max-width: 767px) {
+      text-align: center;
+    }
   `;
 
   return (
