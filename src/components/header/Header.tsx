@@ -1,9 +1,9 @@
 /* @jsx jsx */
 import React from "react";
 import styled from "@emotion/styled";
-import { Navbar } from "../navbar/Navbar";
-import { SvgIcon } from "../helper/SVGicon";
-import { css, jsx } from "@emotion/core";
+import { SvgIcon } from "../../helpers/SVGicon";
+// eslint-disable-next-line
+import { jsx } from "@emotion/core";
 
 export const Header = (props: any) => {
   const Header = styled.div`
@@ -19,7 +19,8 @@ export const Header = (props: any) => {
 
   const Title = styled.h1`
     color: #005351;
-    margin: 100px auto 40px;
+    margin: 0 auto 40px;
+    padding-top: 50px;
     font-size: 48px;
     line-height: 52px;
     font-weight: 600;
@@ -33,7 +34,6 @@ export const Header = (props: any) => {
 
   return (
     <Header>
-      <Navbar />
       <Title>
         Gain real world experience while improving your skills
       </Title>

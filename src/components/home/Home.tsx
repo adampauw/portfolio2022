@@ -1,12 +1,14 @@
 import React from "react";
-import { Feature } from "./components/section/Feature";
-import Header from "./components/header/Header";
-import "./App.scss";
-import Footer from "./components/footer/Footer";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Feature } from "../section/Feature";
+import Header from "../header/Header";
+import "../App.scss";
+import Footer from "../footer/Footer";
 
-const App: React.FC = () => {
+const Home: React.FC = () => {
 
   return (
+    <Router>
     <div className="App">
       <Header />
       <div className="Content">
@@ -32,7 +34,8 @@ const App: React.FC = () => {
         <Footer/>
       </div>
     </div>
+    </Router>
   );
 };
 
-export default App;
+export default Home;

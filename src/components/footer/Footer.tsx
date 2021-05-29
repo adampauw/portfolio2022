@@ -1,8 +1,9 @@
 /* @jsx jsx */
 import React from "react";
 import styled from "@emotion/styled";
-import { css, jsx } from "@emotion/core";
-import { SvgIcon } from "../helper/SVGicon";
+import { SvgIcon } from "../../helpers/SVGicon";
+// eslint-disable-next-line
+import { jsx } from "@emotion/core";
 
 export const Footer = (props: any) => {
   const Footer = styled.div`

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom';
 
 interface NavbarLinkProps {
   text: string;
@@ -8,7 +9,7 @@ interface NavbarLinkProps {
 
 export const NavbarLink = (props: NavbarLinkProps) => {
 
-  const Link = styled.a`
+  const Linker = styled(Link)`
     color: #005351;
     text-decoration: none;
     font-size: 14px;
@@ -31,9 +32,9 @@ export const NavbarLink = (props: NavbarLinkProps) => {
 
   return (
     <>
-      <Link href={props.to}>
+      <Linker to={props.to}>
         {props.text}
-      </Link>
+      </Linker>
     </>
   )
 }

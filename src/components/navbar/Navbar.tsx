@@ -13,7 +13,7 @@ export const Navbar: FC = (props: any) => {
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 20px;
+  padding: 20px 15px 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -27,15 +27,12 @@ export const Navbar: FC = (props: any) => {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #0000;
-  @media(max-width: 425px) {
-    padding-top: 0;
-  }
+  background-color: #ebebeb;
   ` 
   return(
     <NavbarContainer>
-      <NavbarLink text="Xpeeriance" to="#"/>
-      <NavbarLink text="Tasks" to="#"/>
+      <NavbarLink text="Xpeeriance" to="/"/>
+      <NavbarLink text="Tasks" to="/tasks"/>
     </NavbarContainer>
   )
 };

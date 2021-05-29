@@ -36,7 +36,7 @@ export const VisualContainer = (props: VisualProps) => {
 
   return (
     <Visual>
-      <img src={props.image}/>
+      <img src={props.image} alt='' />
     </Visual>
   );
 }
