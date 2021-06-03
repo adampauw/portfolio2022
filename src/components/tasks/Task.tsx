@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useModal } from "../modal/useModal";
+import { Modal } from "../modal/Modal";
 
 interface TaskProps {
   title: string;
@@ -72,6 +74,9 @@ export const Task = (props: TaskProps) => {
     margin-bottom: 0.2em;
   `;
 
+  const { isShown, toggle } = useModal();
+  const content = <React.Fragment>Hey, I'm a model.</React.Fragment>;
+
   return (
     <Task>
       <TaskItem>
@@ -79,6 +84,8 @@ export const Task = (props: TaskProps) => {
         <TaskInfo>
           <TaskTitle>{props.title}</TaskTitle>
           <TaskDescription>{props.text}</TaskDescription>
+          <button onClick={toggle}>Open modal</button>
+          <Modal isShown={isShown} hide={toggle} headerText="header text" modalContent={content} />
         </TaskInfo>
       </TaskItem>
     </Task>
