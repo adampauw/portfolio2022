@@ -10,7 +10,6 @@ export const Navbar: FC = (props: any) => {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
   padding: 20px 15px 0;

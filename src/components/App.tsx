@@ -5,7 +5,7 @@ import {
   Switch,
 } from "react-router-dom";
 
-import { Tasks } from "./tasks/Tasks";
+import TaskContainer from "./tasks/TaskContainer";
 import Home from "./home/Home";
 import { Navbar } from "./navbar/Navbar";
 
@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
-        <Route exact path="/tasks" component={Tasks} />
+        <Route exact path="/tasks" component={TaskContainer} />
       </Switch>
     </Router>
   );

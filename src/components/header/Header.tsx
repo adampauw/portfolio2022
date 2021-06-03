@@ -5,15 +5,20 @@ import { SvgIcon } from "../../helpers/SVGicon";
 // eslint-disable-next-line
 import { jsx } from "@emotion/core";
 
-export const Header = (props: any) => {
+interface HeaderProps {
+  text: string;
+  img: string;
+}
+
+export const Header = (props: HeaderProps) => {
   const Header = styled.div`
     position: relative;
     background-color: #ebebeb;
     padding: 0 60px;
     @media (max-width: 767px) {
       padding 30px 15px;
-      background-image: url(/img/stairs.svg);
-      background-position: unset;
+      background-image: url(${props.img});
+      background-position: right;
     }
   `;
 
@@ -35,9 +40,9 @@ export const Header = (props: any) => {
   return (
     <Header>
       <Title>
-        Gain real world experience while improving your skills
+        {props.text}
       </Title>
-        <SvgIcon src="/img/stairs.svg" cssClass="header-img clear-mobile" stroke="none" />
+        <SvgIcon src={props.img} cssClass="header-img clear-mobile" stroke="none" />
     </Header>
   );
 };
