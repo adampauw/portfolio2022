@@ -22,6 +22,13 @@ export const Task = (props: TaskProps) => {
     width: 33.3%;
   `;
 
+  const ModalButton = styled.button`
+    border: none;
+    padding: 0;
+    border-radius: 6px;
+    background-color: unset;
+  `;
+
   const TaskItem = styled.div`
     display: flex;
     flex-direction: column;
@@ -79,15 +86,21 @@ export const Task = (props: TaskProps) => {
 
   return (
     <Task>
-      <TaskItem>
-        <TaskImage />
-        <TaskInfo>
-          <TaskTitle>{props.title}</TaskTitle>
-          <TaskDescription>{props.text}</TaskDescription>
-          <button onClick={toggle}>Open modal</button>
-          <Modal isShown={isShown} hide={toggle} headerText="header text" modalContent={content} />
-        </TaskInfo>
-      </TaskItem>
+      <ModalButton onClick={toggle}>
+        <TaskItem>
+          <TaskImage />
+          <TaskInfo>
+            <TaskTitle>{props.title}</TaskTitle>
+            <TaskDescription>{props.text}</TaskDescription>
+            <Modal
+              isShown={isShown}
+              hide={toggle}
+              headerText="header text"
+              modalContent={content}
+            />
+          </TaskInfo>
+        </TaskItem>
+      </ModalButton>
     </Task>
   );
 };

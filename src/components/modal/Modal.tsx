@@ -24,7 +24,7 @@ export const Modal: FunctionComponent<ModalProps> = ({
 }) => {
 
   const onKeyDown = (event: KeyboardEvent) => {
-    if (event.keyCode === 27 && isShown) {
+    if (event.key === 'Escape' && isShown) {
       hide();
     }
   };
@@ -35,6 +35,7 @@ export const Modal: FunctionComponent<ModalProps> = ({
     return () => {
       document.removeEventListener('keydown', onKeyDown, false);
     };
+    // eslint-disable-next-line
   }, [isShown]);
   
   const modal = (
