@@ -6,9 +6,13 @@ export const Wrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 700;
-  width: 60%;
+  width: 70%;
   height: 90%;
   outline: 0;
+  @media (max-width: 767px) {
+      width: 100%;
+      height: 100%;
+    }
 `;
 export const Backdrop = styled.div`
   position: fixed;
@@ -24,7 +28,7 @@ export const StyledModal = styled.div`
   background: white;
   position: relative;
   margin: auto;
-  height: 100%;
+  min-height: 90vh;
   border-radius: 8px;
 `;
 export const Header = styled.div`
@@ -49,8 +53,7 @@ export const CloseButton = styled.button`
   }
 `;
 export const Content = styled.div`
-  padding: 10px;
-  max-height: 30rem;
+  height: 90vh;
   overflow-x: hidden;
   overflow-y: auto;
 `;

@@ -14,13 +14,11 @@ export interface ModalProps {
   isShown: boolean;
   hide: () => void;
   modalContent: JSX.Element;
-  headerText: string;
 }
 export const Modal: FunctionComponent<ModalProps> = ({
   isShown,
   hide,
   modalContent,
-  headerText,
 }) => {
 
   const onKeyDown = (event: KeyboardEvent) => {
@@ -41,11 +39,10 @@ export const Modal: FunctionComponent<ModalProps> = ({
   const modal = (
     <React.Fragment>
       <Backdrop onClick={hide} />
-      <Wrapper aria-modal aria-labelledby={headerText} tabIndex={-1} role="dialog"></Wrapper>
+      <Wrapper tabIndex={-1} role="dialog"></Wrapper>
       <Wrapper>
         <StyledModal>
           <Header>
-            <HeaderText>{headerText}</HeaderText>
             <CloseButton onClick={hide}>X</CloseButton>
           </Header>
           <Content>{modalContent}</Content>

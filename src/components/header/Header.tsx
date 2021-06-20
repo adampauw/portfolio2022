@@ -16,7 +16,7 @@ export const Header = (props: HeaderProps) => {
     background-color: #ebebeb;
     padding: 0 60px;
     @media (max-width: 767px) {
-      padding 30px 15px;
+      padding: 30px 15px;
       background-image: url(${props.img});
       background-position: right;
     }
