@@ -1,9 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project X
+#### Video Demo:  <URL https://youtu.be/BHTu70AFWzY>
+#### Description:
+I have created a website to give developers some real world experience before they begin their first jobs. By completing the tasks on my website 
+new developers will be able to display real projects on their CV's as well as collaboration with Designers both of wich are saught after skills and can make
+the difference when applying for jobs.
 
-## Available Scripts
+I thought of this idea because I beleive there is a gap between finishing bootcamps and getting your first job and with this I hope to give developers the confidence to close this gap and not feel the imposter syndrome that I felt when I began my Career. I tried to mimic the real workplace as much as possible by providing designs and descpriptions much like what you would find in a Jira ticket at work. In the future I will provide a way to share feedback as well
 
-In the project directory, you can run:
+Users will be able to visit the site and see real projects curated from actual designs much like they would see in their prospective careers. When they decided on a project to begin they will get a breif summary on what needs to be done to complete this task as well as the designs and some tips on how to succeed.
 
+I used ReactJS to build my project as I am familiar with it and I included some extra technologies wich might have been a tad overkill but it was fun to learn, for example nearly all styled are done using @emotionJS's stylized components which really help to clean up the code as well as enable props or state to control the styles being painted on the screen. 
+
+There are currently two main pages on the site. the main page wich welcomes the users into what they can expect to learn and gain from using my site then a second page with all the currently available tasks. The entire site is responsive all the way down to small mobile screens. in the tasks page I created a Modal component which also adapts to mobile versions. click off the side of the modal will close it as well as pressing esc. The modal was my favourite part to create as I have never actually built one from scratch before so finally getting it to work felt great
+
+Thank you for listing to my idea and I hope you find it as interesting as I do. 
+I would also like to thank you for an amazing course, I learned many things I never knew before and for the things I did know it expanded my understanding of them greatly 
+
+LG
+Adam Pauw
 ### `npm start`
 
 Runs the app in the development mode.<br>
@@ -12,33 +26,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

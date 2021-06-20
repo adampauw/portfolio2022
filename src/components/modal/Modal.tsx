@@ -4,7 +4,6 @@ import {
   Wrapper,
   Header,
   StyledModal,
-  HeaderText,
   CloseButton,
   Content,
   Backdrop,
