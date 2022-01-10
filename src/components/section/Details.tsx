@@ -23,6 +23,7 @@ export const DetailsContainer = (props: DetailsProps) => {
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
+    z-index: 2;
     @media(max-width: 990px) {
       width: 100%;
     }

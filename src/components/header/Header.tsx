@@ -11,10 +11,16 @@ interface HeaderProps {
 }
 
 export const Header = (props: HeaderProps) => {
+  
+  const HeaderWrapper = styled.div`
+  `;
+
   const Header = styled.div`
     position: relative;
-    background-color: #ebebeb;
+    background: rgb(150,123,175);
+    background: linear-gradient(149deg, rgba(150,123,175,1) 0%, rgba(213,194,205,1) 40%);
     padding: 0 60px;
+    border-radius: 0 0 0 250px ;
     @media (max-width: 767px) {
       padding: 30px 15px;
       background-image: url(${props.img});
@@ -38,12 +44,14 @@ export const Header = (props: HeaderProps) => {
   `;
 
   return (
-    <Header>
-      <Title>
-        {props.text}
-      </Title>
-        <SvgIcon src={props.img} cssClass="header-img clear-mobile" stroke="none" />
-    </Header>
+    <HeaderWrapper>
+      <Header>
+        <Title>
+          {props.text}
+        </Title>
+          <SvgIcon src={props.img} cssClass="header-img clear-mobile" stroke="none" />
+      </Header>
+    </HeaderWrapper>
   );
 };
 

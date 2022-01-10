@@ -4,16 +4,25 @@ import { Feature } from "../section/Feature";
 import Header from "../header/Header";
 import "../App.scss";
 import Footer from "../footer/Footer";
+import styled from "@emotion/styled";
 
-const Home: React.FC = () => {
+const Home = () => {
+
+  const App = styled.div `
+    text-align: center;
+    overflow: hidden;
+  `;
+
+  const Content = styled.div`
+  `;
   return (
     <Router>
-      <div className="App">
+      <App>
         <Header
-          text="Gain real world experience while improving your skills"
+          text="Adam Pauw"
           img="/img/stairs.svg"
         />
-        <div className="Content">
+        <Content>
           <Feature
             title="Develop"
             text={[
@@ -23,6 +32,9 @@ const Home: React.FC = () => {
             ]}
             image={"/img/dev1.svg"}
           />
+          </Content>
+          <Header text="adam" img="/img/stairs.svg"/>
+          <Content>
           <Feature
             title="Design"
             text={[
@@ -33,9 +45,9 @@ const Home: React.FC = () => {
             image={"/img/des1.svg"}
             mirror={true}
           />
-        </div>
+        </Content>
         <Footer />
-      </div>
+      </App>
     </Router>
   );
 };

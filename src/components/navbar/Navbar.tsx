@@ -30,8 +30,8 @@ export const Navbar: FC = (props: any) => {
   ` 
   return(
     <NavbarContainer>
-      <NavbarLink text="Xpeeriance" to="/"/>
-      <NavbarLink text="Tasks" to="/tasks"/>
+      <NavbarLink text="Home" to="/"/>
+      <NavbarLink text="Work" to="/tasks"/>
     </NavbarContainer>
   )
 };
