@@ -13,6 +13,10 @@ interface HeaderProps {
 export const Header = (props: HeaderProps) => {
   
   const HeaderWrapper = styled.div`
+    transition: all .2s ease-in-out;
+    &:hover{
+      transform: scale(1.1);
+    }
   `;
 
   const Header = styled.div`
@@ -20,10 +24,10 @@ export const Header = (props: HeaderProps) => {
     background: rgb(150,123,175);
     background: linear-gradient(149deg, rgba(150,123,175,1) 0%, rgba(213,194,205,1) 40%);
     padding: 0 60px;
-    border-radius: 0 0 0 250px ;
+    margin: -250px 0 -250px 0;
+    padding: 250px 0;
     @media (max-width: 767px) {
-      padding: 30px 15px;
-      background-image: url(${props.img});
+      /* background-image: url(${props.img}); */
       background-position: right;
     }
   `;

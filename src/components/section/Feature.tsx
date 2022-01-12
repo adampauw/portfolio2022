@@ -15,12 +15,13 @@ export const Feature = (props: FeatureProps) => {
   const FeatureContainer = styled.div`
   background-color: #17062B;
   position: relative;
-  border-radius: 0 250px 250px 0;
+  border-radius: 0 0 0 150px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1300px;
+  min-height: 600px;
+  z-index: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: ${props.mirror ? 'row-reverse' : 'row'};
@@ -33,30 +34,20 @@ export const Feature = (props: FeatureProps) => {
     @media(max-width: 767px) {
       margin-top: 30px;
       padding-right: 10px;
-      padding-left: 10px;
+      min-height: 200px;
+
     }
     &:before {
       content: "";
       position: absolute;
       background-color: #0000;
-      bottom: -600px;
-      height: 600px;
-      width: 250px;
-      border-top-left-radius: 250px;
-      box-shadow: 0 -250px 0 0 #17062b;
+      top: -300px;
+      height: 300px;
+      width: 150px;
+      border-bottom-left-radius: 150px;
+      box-shadow: 0 150px 0 0 #17062b;
       z-index: 1;
-}
-    &:after {
-      content: "";
-      position: absolute;
-      background-color: #0000;
-      top: -600px;
-      height: 600px;
-      width: 250px;
-      border-bottom-left-radius: 250px;
-      box-shadow: 0 250px 0 0 #17062b;
-      z-index: 1;
-}
+    }
   `
 
   return (

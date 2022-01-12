@@ -43,7 +43,6 @@ const Home = () => {
               "Collaborate with developers to learn skills",
             ]}
             image={"/img/des1.svg"}
-            mirror={true}
           />
         </Content>
         <Footer />
