@@ -13,25 +13,18 @@ export const Navbar: FC = (props: any) => {
   margin-right: auto;
   margin-left: auto;
   padding: 20px 15px 0;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
+  -webkit-justify-content: flex-end;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: flex-end;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #ebebeb;
   ` 
   return(
     <NavbarContainer>
-      <NavbarLink text="Home" to="/"/>
-      <NavbarLink text="Work" to="/tasks"/>
+      <NavbarLink text="Menu" to="#"/>
     </NavbarContainer>
   )
 };

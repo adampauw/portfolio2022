@@ -13,7 +13,7 @@ export const Footer = (props: any) => {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 55px 55px 55px;
+    margin: 55px;
     padding: 40px 60px;
     border-radius: 8px;
     background-image: linear-gradient(127deg,#00aa9b,#008b78);

@@ -7,12 +7,10 @@ import {
 
 import TaskContainer from "./tasks/TaskContainer";
 import Home from "./home/Home";
-import { Navbar } from "./navbar/Navbar";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Navbar/>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />

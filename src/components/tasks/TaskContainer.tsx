@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import Header from "../header/Header";
+import Banner from "../banner/Banner";
 import Task from "./Task";
 import Footer from "../footer/Footer";
 
@@ -29,9 +29,8 @@ export const TaskContainer: FC = (props: any) => {
 
   return (
     <div className="App">
-      <Header
+      <Banner
         text="Choose from our professionaly procured task list"
-        img="/img/museum.svg"
       />
       <div className="Content">
         <TaskTitle>Tasks</TaskTitle>

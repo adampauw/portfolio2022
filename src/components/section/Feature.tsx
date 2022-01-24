@@ -15,7 +15,7 @@ export const Feature = (props: FeatureProps) => {
   const FeatureContainer = styled.div`
   background-color: #17062B;
   position: relative;
-  border-radius: 0 0 0 150px;
+  border-radius: 0 0 0 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,11 +41,11 @@ export const Feature = (props: FeatureProps) => {
       content: "";
       position: absolute;
       background-color: #0000;
-      top: -300px;
-      height: 300px;
-      width: 150px;
-      border-bottom-left-radius: 150px;
-      box-shadow: 0 150px 0 0 #17062b;
+      top: -200px;
+      height: 200px;
+      width: 100px;
+      border-bottom-left-radius: 100px;
+      box-shadow: 0 100px 0 0 #17062b;
       z-index: 1;
     }
   `

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Feature } from "../section/Feature";
-import Header from "../header/Header";
+import { Banner } from "../banner/Banner";
 import "../App.scss";
 import Footer from "../footer/Footer";
 import styled from "@emotion/styled";
@@ -18,9 +18,8 @@ const Home = () => {
   return (
     <Router>
       <App>
-        <Header
-          text="Adam Pauw"
-          img="/img/stairs.svg"
+        <Banner
+          text="adam pauw"
         />
         <Content>
           <Feature
@@ -33,7 +32,7 @@ const Home = () => {
             image={"/img/dev1.svg"}
           />
           </Content>
-          <Header text="adam" img="/img/stairs.svg"/>
+          <Banner text="adam"/>
           <Content>
           <Feature
             title="Design"

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { DARK_WHITE, WHITE } from "../../Constants/Colours.constants";
 
 interface DetailsProps {
   text: string[];
@@ -55,7 +56,7 @@ export const DetailsContainer = (props: DetailsProps) => {
   const Text = styled.div`
     margin: 10px;
     padding: 15px;
-    color: #0006;
+    color: ${DARK_WHITE};
     font-size: 16px;
     line-height: 24px;
     display: flex;
@@ -70,7 +71,7 @@ export const DetailsContainer = (props: DetailsProps) => {
 
   const Title = styled.h1`
     margin-bottom: 43px;
-    color: #005351;
+    color: ${WHITE};
     font-size: 42px;
     line-height: 46px;
     font-weight: 600;
