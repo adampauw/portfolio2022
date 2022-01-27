@@ -7,6 +7,8 @@ max-width: 1700px;
 z-index: 99;
 position: relative;
 text-align: center;
+@media(max-width: 767px) {
+    display: none;
 }
 `;
 

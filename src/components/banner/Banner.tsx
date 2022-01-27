@@ -30,11 +30,11 @@ const Banner = styled.div`
     color: ${WHITE};
     margin: 0 auto 40px;
     padding-top: 50px;
-    font-size: 60px;
+    font-size: 80px;
     font-family: 'Monoton', cursive;
     @media (max-width: 767px) {
-      font-size: 35px;
-      margin: 70px auto 40px;
+      font-size: 65px;
+      width: 40%;
     }
   `;
 

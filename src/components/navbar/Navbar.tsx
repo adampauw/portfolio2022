@@ -1,30 +1,62 @@
-import React,{FC} from 'react'
-import { NavbarLink } from './NavbarLink';
+/** @jsx jsx */
+import React, {FC} from 'react'
 import styled from '@emotion/styled';
+import { css, jsx } from '@emotion/react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faIgloo, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Navbar: FC = (props: any) => {
 
-  const NavbarContainer = styled.div `
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  const Link = styled.a`
+  text-decoration: none;
+  `;
+
+  const LinkContent = styled.div `
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px 15px 0;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: justify;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
+  padding-left: 15px;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  color: #2c3e50;
+  border: none;
+  border-radius: 30px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  right: -55px;
+  transition: .7s ease;
+  @media(min-width: 767px) {
+    &:hover {
+      background-color: #ffffff;
+      position: fixed;
+      right: -50px;
+      width: 200px;
+    }
+  }
+  @media(max-width: 767px) {
+    position: absolute;
+    &:active {
+    }
+  }
+  svg {
+    font-size: 20px;
+    margin-right: 15%;
+  }
   ` 
+
   return(
-    <NavbarContainer>
-      <NavbarLink text="Menu" to="#"/>
-    </NavbarContainer>
+    <React.Fragment>
+      <Link href='#'>
+        <LinkContent css={css`top: 20px; @media (max-width: 767px) {top: 120px;}`}><FontAwesomeIcon icon={faIgloo}/>Home</LinkContent>
+      </Link>
+      <Link href='##'>
+        <LinkContent css={css`top: 80px; @media (max-width: 767px) {top: 180px;}`}><FontAwesomeIcon icon={faUserAstronaut}/>About</LinkContent>
+      </Link>
+      <Link href='###'>
+        <LinkContent css={css`top: 140px; @media (max-width: 767px) {top: 240px;}`}><FontAwesomeIcon icon={faCode}/>Code</LinkContent>
+      </Link>
+    </React.Fragment>
   )
 };

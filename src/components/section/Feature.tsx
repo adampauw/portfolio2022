@@ -35,7 +35,6 @@ export const Feature = (props: FeatureProps) => {
       margin-top: 30px;
       padding-right: 10px;
       min-height: 200px;
-
     }
     &:before {
       content: "";
