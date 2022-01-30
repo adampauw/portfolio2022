@@ -3,8 +3,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Feature } from "../section/Feature";
 import { Banner } from "../banner/Banner";
 import "../App.scss";
-import Footer from "../footer/Footer";
 import styled from "@emotion/styled";
+import TaskContainer from "../tasks/TaskContainer";
 
 const Home = () => {
 
@@ -13,38 +13,19 @@ const Home = () => {
     overflow: hidden;
   `;
 
-  const Content = styled.div`
-  `;
   return (
     <Router>
       <App>
         <Banner
           text="adam pauw"
         />
-        <Content>
           <Feature
-            title="Develop"
+            title="Hey! I'm Adam. A web developer based in Squamish"
             text={[
-              "Pick a design that you feel will be a nice challenge for you at this stage",
-              "We provide all the files youll need to complete the challenge. Building it is up to you",
-              "Use your new project to bolster your portfolio and other such things that benefit you ",
+              "Since 2018 I have been working as a Frontend Developer and before that I was an Electrical Foreman managing jobs for companys like Amazon and Mercedes until one day I started wishing I had more complex problems to solve. My very first day as a developer I spent an hour trying to fix an issue which in the end was just a missing semi-colon and after the rage drained from my eyes I really felt I'd chosen the right career",
             ]}
-            image={"/img/dev1.svg"}
           />
-          </Content>
-          <Banner text="adam"/>
-          <Content>
-          <Feature
-            title="Design"
-            text={[
-              "Create your own design tasks to challenge developers",
-              "Provide all neccessary resources to the developers",
-              "Collaborate with developers to learn skills",
-            ]}
-            image={"/img/des1.svg"}
-          />
-        </Content>
-        <Footer />
+          <TaskContainer />
       </App>
     </Router>
   );

@@ -1,32 +1,34 @@
+/** @jsx jsx */
 import React from 'react'
 import VisualContainer from './Visual';
 import styled from '@emotion/styled';
 import DetailsContainer from './Details';
+import { WHITE } from '../../Constants/Colours.constants';
+import { css, jsx } from '@emotion/core';
 
 interface FeatureProps {
   title: string;
   text: string[];
-  image: string;
   mirror?: boolean;
 }
 
 export const Feature = (props: FeatureProps) => {
 
   const FeatureContainer = styled.div`
-  background-color: #17062B;
+  background-color: #17062b;
   position: relative;
   border-radius: 0 0 0 100px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 600px;
   z-index: 1;
+  padding-bottom: 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: ${props.mirror ? 'row-reverse' : 'row'};
-  -ms-flex-direction: ${props.mirror ? 'row-reverse' : 'row'};
-  flex-direction: ${props.mirror ? 'row-reverse' : 'row'};
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -49,12 +51,30 @@ export const Feature = (props: FeatureProps) => {
     }
   `
 
+  const Feature = styled.div`
+    display: flex;
+    margin: 30px 0;
+    flex-direction: row;
+    justify-content: space-around;
+  `;
+
+  const Languages = styled.div`
+    color: ${WHITE};
+    margin: 0 5%;
+    font-size: 22px;
+  `;
+
   return (
-    <>
     <FeatureContainer>
-      <DetailsContainer title={props.title} text={props.text}/>
-      <VisualContainer image={props.image} />
+      <div css={css`margin: 0 20px;`}>
+        <Feature>
+          <DetailsContainer title={props.title} text={props.text}/>
+          <VisualContainer/>
+        </Feature>
+        <Languages>
+          React | Typescript | Javascript | Redux | Mobx | MaterialUI | EmotionJs | Scss | Kubernetes | REST | Jest | Enzyme
+        </Languages>
+      </div>
     </FeatureContainer>
-    </>
   );
 }

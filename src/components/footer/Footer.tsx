@@ -1,9 +1,13 @@
 /* @jsx jsx */
 import React from "react";
 import styled from "@emotion/styled";
-import { SvgIcon } from "../../helpers/SVGicon";
 // eslint-disable-next-line
 import { jsx } from "@emotion/core";
+import Plant2 from "../../assets/images/plant2.png"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+
 
 export const Footer = (props: any) => {
   const Footer = styled.div`
@@ -13,10 +17,10 @@ export const Footer = (props: any) => {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 55px;
+    margin: 0 55px;
     padding: 40px 60px;
-    border-radius: 8px;
-    background-image: linear-gradient(127deg,#00aa9b,#008b78);
+    border-radius: 8px 8px 8px 100px;
+    background-color: #17062b;
     @media(max-width: 767px) {
       margin: 5px;
       padding: 30px 40px;
@@ -27,13 +31,6 @@ export const Footer = (props: any) => {
     display: flex;
     flex-direction: column;
     text-align: left;
-  `;
-
-  const Title = styled.h1`
-    color: white;
-    @media(max-width: 767px) {
-      font-size: 20px;
-    }
   `;
 
   const Text = styled.a`
@@ -48,26 +45,37 @@ export const Footer = (props: any) => {
   }
   `;
 
+  const Image = styled.img`
+    width: 25%;
+    object-fit: scale-down;
+    -webkit-animation: pop 10s ease-in-out infinite;
+    -moz-animation: pop 10s ease-in-out infinite;
+    -ms-animation: pop 10s ease-in-out infinite;
+    -o-animation: pop 10s ease-in-out infinite;
+    animation: pop 10s ease-in-out infinite;
+    @keyframes pop {
+        3% { transform: scale(105%); }
+        6% { transform: scale(105%); }
+        9% { transform: scale(100%); }
+    }
+  `;
+
   return (
     <Footer>
       <TextContainer>
-      <Title>
-        Still need some help?
-      </Title>
-      <Text href="#">
-        Sign-up
+      <Text href="https://www.linkedin.com/in/adampauw/" target="_blank">
+      <FontAwesomeIcon icon={faLinkedin}/>
+        LinkedIn
       </Text>
-      <Text href="#">
-        Contact
-      </Text>
-      <Text href="#">
-        FAQ
+      <Text href="https://github.com/adampauw" target="_blank">
+        Github
+      </Text >
+      <Text href="mailto:adampauw@gmail.com">
+        Email
       </Text>
       </TextContainer>
-      <SvgIcon 
-        src='/img/team.svg'
-        stroke='none'
-        cssClass='footer-img clear-mobile'
+      <Image 
+        src={Plant2}
       />
     </Footer>
   );

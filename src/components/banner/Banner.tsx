@@ -16,7 +16,6 @@ export const Banner = (props: BannerProps) => {
 const Banner = styled.div`
     width: 100%;
     position: relative;
-    background: #967baf;
     background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
     padding: 0 60px;
     margin: -100px 0 -100px 0;
@@ -34,7 +33,6 @@ const Banner = styled.div`
     font-family: 'Monoton', cursive;
     @media (max-width: 767px) {
       font-size: 65px;
-      width: 40%;
     }
   `;
 

@@ -10,6 +10,9 @@ export const Navbar: FC = (props: any) => {
 
   const Link = styled.a`
   text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
   `;
 
   const LinkContent = styled.div `
@@ -27,6 +30,7 @@ export const Navbar: FC = (props: any) => {
   position: fixed;
   right: -55px;
   transition: .7s ease;
+  z-index: 100;
   @media(min-width: 767px) {
     &:hover {
       background-color: #ffffff;
@@ -55,7 +59,7 @@ export const Navbar: FC = (props: any) => {
         <LinkContent css={css`top: 80px; @media (max-width: 767px) {top: 180px;}`}><FontAwesomeIcon icon={faUserAstronaut}/>About</LinkContent>
       </Link>
       <Link href='###'>
-        <LinkContent css={css`top: 140px; @media (max-width: 767px) {top: 240px;}`}><FontAwesomeIcon icon={faCode}/>Code</LinkContent>
+        <LinkContent css={css`top: 140px; @media (max-width: 767px) {top: 240px;}`}><FontAwesomeIcon icon={faCode}/>Work</LinkContent>
       </Link>
     </React.Fragment>
   )

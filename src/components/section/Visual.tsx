@@ -1,16 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Profile from "../../assets/images/adam-portrait.jpg"
 
-interface VisualProps {
-  image: string;
-}
-
-export const VisualContainer = (props: VisualProps) => {
+export const VisualContainer = () => {
 
   const Visual = styled.div`
+    display: flex;
     position: relative;
-    padding-right: 60px;
-    padding-left: 60px;    
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -20,23 +16,26 @@ export const VisualContainer = (props: VisualProps) => {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    width: 50%;
+    justify-content: center;
+    width: 25%;
     & > img {
       width: 100%;
+      border-radius: 50%;
+      border: 11px double #fff;
+      padding: 15px;
     }
-    @media(max-width: 990px) {
-      position: absolute;
-      padding: 10px;
-      opacity: .1;
-      z-index: -1;
-      width: 80%;
+    @media(max-width: 767px) {
+      display: none;
+    }
+    @media(min-width: 2560px) {
+      width: 20%;
     }
 
   `;
 
   return (
     <Visual>
-      <img src={props.image} alt='' />
+      <img src={Profile} alt='' />
     </Visual>
   );
 }

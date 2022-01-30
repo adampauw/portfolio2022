@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import Banner from "../banner/Banner";
 import Task from "./Task";
 import Footer from "../footer/Footer";
 
@@ -16,24 +15,15 @@ export const TaskContainer: FC = (props: any) => {
     margin: 150px 0;
   `;
 
-  const TaskTitle = styled.h1`
-  color: #005351;
-  margin: 0 auto 40px;
-  padding-top: 50px;
-  font-size: 48px;
-  line-height: 52px;
-  font-weight: 600;
-  text-align: center;
-  width: 90%;
+  const TaskWrapper = styled.div`
+      background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
+      padding-bottom: 55px;
+      margin-top: -100px;
+      padding-top: 100px;
   `;
 
   return (
-    <div className="App">
-      <Banner
-        text="Choose from our professionaly procured task list"
-      />
-      <div className="Content">
-        <TaskTitle>Tasks</TaskTitle>
+      <TaskWrapper>
         <TaskContainer>
           <Task image={"/img/task1.webp"} title="3-column card component" text="This challenge is perfect if you're just getting started. The shift between the layouts will be a nice test if you're new to building responsive projects."/>
           <Task image={"/img/task2.webp"} title="Testimonials grid section" text="This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!"/>
@@ -45,9 +35,8 @@ export const TaskContainer: FC = (props: any) => {
           <Task image={"/img/task8.webp"} title="Calculator app" text="This calculator app will be a great test of your CSS and JS skills especially. If you're wanting to practice using Grid, this challenge will be perfect for you!"/>
           <Task image={"/img/task9.webp"} title="Planets fact site" text="In this challenge, you'll be building out an 8-page fact site for all planets in our solar system. This project will make an incredible portfolio piece when completed!"/>
         </TaskContainer>
-      </div>
-      <Footer/>
-    </div>
+        <Footer/>
+      </TaskWrapper>
   );
 };
 
