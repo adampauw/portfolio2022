@@ -3,7 +3,7 @@ import React from 'react'
 import VisualContainer from './Visual';
 import styled from '@emotion/styled';
 import DetailsContainer from './Details';
-import { WHITE } from '../../Constants/Colours.constants';
+import { DARK_WHITE, PURPLE } from '../../Constants/Colours.constants';
 import { css, jsx } from '@emotion/core';
 
 interface FeatureProps {
@@ -15,7 +15,7 @@ interface FeatureProps {
 export const Feature = (props: FeatureProps) => {
 
   const FeatureContainer = styled.div`
-  background-color: #17062b;
+  background-color: ${PURPLE};
   position: relative;
   border-radius: 0 0 0 100px;
   display: -webkit-box;
@@ -59,7 +59,7 @@ export const Feature = (props: FeatureProps) => {
   `;
 
   const Languages = styled.div`
-    color: ${WHITE};
+    color: ${DARK_WHITE};
     margin: 0 5%;
     font-size: 22px;
   `;

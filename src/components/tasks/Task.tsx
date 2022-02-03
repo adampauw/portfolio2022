@@ -1,12 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styled from "@emotion/styled";
 import { useModal } from "../modal/useModal";
 import { Modal } from "../modal/Modal";
+import { PURPLE } from "../../Constants/Colours.constants";
 
 interface TaskProps {
   title: string;
   text: string;
-  image: string;
+  children?: ReactNode;
 }
 
 export const Task = (props: TaskProps) => {
@@ -25,18 +26,14 @@ export const Task = (props: TaskProps) => {
 
   const ModalButton = styled.button`
     border: none;
-    padding: 0;
-    border-radius: 6px;
     background-color: unset;
+    width: 100%;
   `;
 
   const TaskItem = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #fff;
     width: 100%;
-    border-radius: 6px;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     transition: transform 0.5s;
     -webkit-transition: transform 0.5s;
@@ -47,32 +44,19 @@ export const Task = (props: TaskProps) => {
     }
   `;
 
-  const TaskImage = styled.div`
-    height: 200px;
-    overflow: hidden;
-    background-image: url(${props.image});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 6px 6px 0px 0px;
-    opacity: 0.91;
-    &:hover {
-      opacity: 1;
-    }
-  `;
-
   const TaskInfo = styled.div`
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    padding: 1rem;
+    padding: 0 1rem;
     line-height: 1.5em;
   `;
 
   const TaskTitle = styled.h2`
     font-size: 25px;
+    font-family: 'Zen Kurenaido';
     line-height: 1.1em;
-    color: #32325d;
+    color: ${PURPLE};
     margin-bottom: 0.2em;
     text-align: center;
   `;
@@ -95,10 +79,6 @@ export const Task = (props: TaskProps) => {
   const ModalImage = styled.div`
     height: 300px;
     overflow: hidden;
-    background-image: url(${props.image});
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   `;
 
   const ModalTextWrapper = styled.div`
@@ -190,10 +170,10 @@ export const Task = (props: TaskProps) => {
     <Task>
       <ModalButton onClick={toggle}>
         <TaskItem>
-          <TaskImage />
           <TaskInfo>
             <TaskTitle>{props.title}</TaskTitle>
             <TaskDescription>{props.text}</TaskDescription>
+            {props.children}
             <Modal
               isShown={isShown}
               hide={toggle}

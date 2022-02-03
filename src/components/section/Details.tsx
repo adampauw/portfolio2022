@@ -43,7 +43,7 @@ export const DetailsContainer = (props: DetailsProps) => {
   `;
 
   const Text = styled.div`
-    color: ${DARK_WHITE};
+    color: ${WHITE};
     font-size: 22px;
     line-height: 24px;
     display: flex;

@@ -1,9 +1,14 @@
+/** @jsx jsx */
 import React, { FC } from "react";
 import styled from "@emotion/styled";
 import Task from "./Task";
 import Footer from "../footer/Footer";
+import Browser from "../../assets/images/browser.png"
+import Books from "../../assets/images/books.png"
+import { PURPLE } from "../../Constants/Colours.constants";
+import { css, jsx } from "@emotion/react";
 
-export const TaskContainer: FC = (props: any) => {
+export const TaskContainer: FC = () => {
   const TaskContainer = styled.div`
     display: flex;
     -webkit-display: box;
@@ -22,18 +27,35 @@ export const TaskContainer: FC = (props: any) => {
       padding-top: 100px;
   `;
 
+  const Divider = styled.div`
+    width: 80%;
+    border: 2px solid ${PURPLE};
+    margin: 100px auto;
+    border-radius: 40%;
+  `;
+
+  const Image = styled.img`
+  width: 100%;
+  height: auto;
+  margin: auto;
+  `;
+
   return (
       <TaskWrapper>
         <TaskContainer>
-          <Task image={"/img/task1.webp"} title="3-column card component" text="This challenge is perfect if you're just getting started. The shift between the layouts will be a nice test if you're new to building responsive projects."/>
-          <Task image={"/img/task2.webp"} title="Testimonials grid section" text="This challenge will be perfect practice for anyone wanting to test their CSS Grid skills. Grid is such a powerful addition to CSS, so it's worth getting to grips with it!"/>
-          <Task image={"/img/task3.webp"} title="PayAPI multi-page website" text="This 4-page website will be a great test for your HTML & CSS skills. You'll be building out a marketing site, complete with custom form validation throughout."/>
-          <Task image={"/img/task4.webp"} title="Chat app CSS illustration" text="In this challenge, you'll be building out the entire app illustration from scratch. This will seriously test your CSS skills. So give it a go if you feel confident!"/>
-          <Task image={"/img/task5.webp"} title="Myteam multi-page website" text="This challenge will give you a real glimpse into a professional front-end developer's workflow. It includes designs for a 3-page fully-functional website."/>
-          <Task image={"/img/task6.webp"} title="Base Apparel page" text="This layout looks simple enough, but there are some interesting details to it that will test your CSS skills. You'll also get to practice basic form validation."/>
-          <Task image={"/img/task7.webp"} title="Project tracking component" text="Some interesting layout and code challenges are baked into this design. Perfect if you're a beginner who is starting to get a bit more confident with your layouts."/>
-          <Task image={"/img/task8.webp"} title="Calculator app" text="This calculator app will be a great test of your CSS and JS skills especially. If you're wanting to practice using Grid, this challenge will be perfect for you!"/>
-          <Task image={"/img/task9.webp"} title="Planets fact site" text="In this challenge, you'll be building out an 8-page fact site for all planets in our solar system. This project will make an incredible portfolio piece when completed!"/>
+          <Task title="Import Feature" text=""><Image src={Browser}/></Task>
+          <Task title="UI Re-brush" text=""><Image src={Browser}/></Task>
+          <Task title="Adamin Interface" text=""><Image src={Browser}/></Task>
+          <Task title="Event Service Migration" text=""><Image src={Browser}/></Task>
+          <Task title="Neo Pro" text=""><Image src={Browser}/></Task>
+          <Task title="Neo Event Creation" text=""><Image src={Browser}/></Task>
+          <Task title="This Portfolio" text=""><Image src={Browser}/></Task>
+          <Divider/>
+          <Task title="Harvard" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
+          <Task title="Code Academy" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
+          <Task title="Udemy" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
+          <Task title="Career Foundry" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
+          <Task title="CodeCore" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
         </TaskContainer>
         <Footer/>
       </TaskWrapper>
