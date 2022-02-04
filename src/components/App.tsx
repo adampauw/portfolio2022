@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 
 import TaskContainer from "./tasks/TaskContainer";
-import Home from "./home/Home";
+import Home from "./Home/Home";
 
 const App: React.FC = () => {
   return (

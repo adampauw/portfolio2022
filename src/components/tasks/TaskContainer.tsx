@@ -1,12 +1,14 @@
 /** @jsx jsx */
-import React, { FC } from "react";
+import { FC } from "react";
 import styled from "@emotion/styled";
 import Task from "./Task";
-import Footer from "../footer/Footer";
-import Browser from "../../assets/images/browser.png"
-import Books from "../../assets/images/books.png"
+import Footer from "../Footer/Footer";
+import Browser from "../../Assets/Images/browser.png"
+import Books from "../../Assets/Images/books.png"
 import { PURPLE } from "../../Constants/Colours.constants";
 import { css, jsx } from "@emotion/react";
+import { IProject, Projects } from "../../Models/Projects";
+import { IStudy, Studies } from "../../Models/Studies";
 
 export const TaskContainer: FC = () => {
   const TaskContainer = styled.div`
@@ -43,19 +45,28 @@ export const TaskContainer: FC = () => {
   return (
       <TaskWrapper>
         <TaskContainer>
-          <Task title="Import Feature" text=""><Image src={Browser}/></Task>
-          <Task title="UI Re-brush" text=""><Image src={Browser}/></Task>
-          <Task title="Adamin Interface" text=""><Image src={Browser}/></Task>
-          <Task title="Event Service Migration" text=""><Image src={Browser}/></Task>
-          <Task title="Neo Pro" text=""><Image src={Browser}/></Task>
-          <Task title="Neo Event Creation" text=""><Image src={Browser}/></Task>
-          <Task title="This Portfolio" text=""><Image src={Browser}/></Task>
+          {
+            Projects.map((project: IProject) => (
+              <Task 
+                title={project.title} 
+                description={project.description} 
+                images={project.images}
+                link={project.link}>
+                <Image src={Browser}/>
+              </Task>
+
+          ))} 
           <Divider/>
-          <Task title="Harvard" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
-          <Task title="Code Academy" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
-          <Task title="Udemy" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
-          <Task title="Career Foundry" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
-          <Task title="CodeCore" text=""><Image src={Books} css={css`width: 65%;`}/></Task>
+          {
+            Studies.map((study: IStudy) => (
+              <Task 
+                title={study.title} 
+                description={study.description} 
+                images={study.image}
+                link={study.link}>
+                <Image src={Books} css={css`width: 65%;`}/>
+              </Task>
+          ))}
         </TaskContainer>
         <Footer/>
       </TaskWrapper>

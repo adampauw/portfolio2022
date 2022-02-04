@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { DARK_WHITE, WHITE } from "../../Constants/Colours.constants";
+import { WHITE } from "../../Constants/Colours.constants";
 
 interface DetailsProps {
   text: string[];

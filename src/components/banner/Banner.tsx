@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 import { jsx } from "@emotion/core";
 import {WHITE} from '../../Constants/Colours.constants'
 import { BannerImage } from "./BannerImage";
-import { Navbar } from "../navbar/Navbar";
+import { Navbar } from "../Navbar/Navbar";
 
 interface BannerProps {
   text: string;

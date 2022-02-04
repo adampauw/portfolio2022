@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Feature } from "../section/Feature";
-import { Banner } from "../banner/Banner";
+import { Feature } from "../InfoSection/Feature";
+import { Banner } from "../Banner/Banner";
 import "../App.scss";
 import styled from "@emotion/styled";
 import TaskContainer from "../tasks/TaskContainer";

@@ -3,7 +3,7 @@ import React from "react";
 import styled from "@emotion/styled";
 // eslint-disable-next-line
 import { jsx } from "@emotion/core";
-import Plant2 from "../../assets/images/plant2.png"
+import Plant2 from "../../Assets/Images/plant2.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';

@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from 'react'
 import VisualContainer from './Visual';
 import styled from '@emotion/styled';
 import DetailsContainer from './Details';
