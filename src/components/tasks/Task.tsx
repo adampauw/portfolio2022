@@ -23,11 +23,6 @@ export const Task = (props: TaskProps) => {
     }
   `;
 
-  const ModalButton = styled.button`
-    border: none;
-    background-color: unset;
-    width: 100%;
-  `;
 
   const TaskItem = styled.div`
     display: flex;
@@ -49,7 +44,7 @@ export const Task = (props: TaskProps) => {
     flex-direction: column;
     padding: 0 1rem;
     line-height: 1.5em;
-  `;
+    `;
 
   const TaskTitle = styled.h2`
     font-size: 25px;
@@ -58,34 +53,61 @@ export const Task = (props: TaskProps) => {
     color: ${PURPLE};
     margin-bottom: 0.2em;
     text-align: center;
-  `;
+    `;
 
-  const TaskDescription = styled.span`
-    font-size: 15px;
-    color: #32325d;
-    margin-bottom: 0.2em;
+  const ModalButton = styled.button`
+    border: none;
+    background-color: unset;
+    width: 100%;
   `;
 
   const ModalTitle = styled.h2`
-    font-size: 25px;
+    font-size: 32px;
     line-height: 1.1em;
     color: #32325d;
-    margin-bottom: 0.2em;
+    margin: 0 0 50px;
     text-align: center;
-    margin: 50px 0;
   `;
 
-  const ModalImage = styled.div`
-    height: 300px;
-    overflow: hidden;
+  const ModalTaskDescriptionBlock = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0;
+    :nth-child(2n) {
+    flex-direction: row-reverse;
+    }
+    @media (max-width: 425px) {
+      flex-direction: column;
+      :nth-child(2n) {
+        flex-direction: column;
+      }
+    }
   `;
 
-  const ModalTextWrapper = styled.div`
+  const ModalTaskDescription = styled.span`
+    font-size: 15px;
+    color: #32325d;
+    margin-bottom: 0.2em;
+    @media(max-width: 425px) {
+      text-align: center;
+      margin-bottom: 30px;
+    } 
+  `;
+
+  const ModalTaskImage = styled.img`
+    width: 50%;
+    @media(max-width: 425px) {
+      width: 100%;
+      margin: auto;
+    } 
+  `;
+
+  const ModalContentWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 30px;
+    flex-direction: column;
     @media (max-width: 426px) {
-      flex-direction: column;
     }
   `;
 
@@ -100,29 +122,28 @@ export const Task = (props: TaskProps) => {
   const content = (
     <React.Fragment>
       <div className="modal-content-wrapper">
-        <ModalImage />
         <ModalTitle>{props.title}</ModalTitle>
-        <ModalTextWrapper>
+        <ModalContentWrapper>
           <ModalText>
-            <h3>Instructions</h3>
+            <h3>Domain: <a href={props.link.url} target="_blank">{props.link.title}</a></h3>
+          </ModalText>
+            <h3>Project</h3>
             <span>
-              Your challenge is to
+              {props.description[0]}
             </span>
-          </ModalText>
-          <ModalText>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <div>
-                <h3>Getting Started</h3>
-                <span>
-                  Download the starter code
-                </span>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <h3>Resources</h3>
-              </div>
-            </div>
-          </ModalText>
-        </ModalTextWrapper>
+            <ModalTaskDescriptionBlock>
+              <ModalTaskDescription>{props.description[1]}</ModalTaskDescription>
+              <ModalTaskImage src={props.images[0]} alt=""/>
+            </ModalTaskDescriptionBlock>
+            <ModalTaskDescriptionBlock>
+              <ModalTaskDescription>{props.description[2]}</ModalTaskDescription>
+              <ModalTaskImage src={props.images[0]} alt=""/>
+            </ModalTaskDescriptionBlock>
+            <ModalTaskDescriptionBlock>
+              <ModalTaskDescription>{props.description[1]}</ModalTaskDescription>
+              <ModalTaskImage src={props.images[0]} alt=""/>
+            </ModalTaskDescriptionBlock>
+        </ModalContentWrapper>
       </div>
     </React.Fragment>
   );

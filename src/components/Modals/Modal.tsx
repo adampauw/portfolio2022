@@ -8,6 +8,9 @@ import {
   Content,
   Backdrop,
 } from './Modal.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
+
 
 export interface ModalProps {
   isShown: boolean;
@@ -37,12 +40,12 @@ export const Modal: FunctionComponent<ModalProps> = ({
   
   const modal = (
     <React.Fragment>
-      <Backdrop onClick={hide} />
+      <Backdrop/>
       <Wrapper tabIndex={-1} role="dialog"></Wrapper>
       <Wrapper>
         <StyledModal>
           <Header>
-            <CloseButton onClick={hide}>X</CloseButton>
+            <CloseButton onClick={hide}><FontAwesomeIcon icon={faSkullCrossbones}/></CloseButton>
           </Header>
           <Content>{modalContent}</Content>
         </StyledModal>
