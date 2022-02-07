@@ -55,6 +55,11 @@ export const Task = (props: TaskProps) => {
     text-align: center;
     `;
 
+  const Link = styled.a`
+    color: ${PURPLE};
+    font-weight: initial;
+  `;
+
   const ModalButton = styled.button`
     border: none;
     background-color: unset;
@@ -72,7 +77,7 @@ export const Task = (props: TaskProps) => {
   const ModalTaskDescriptionBlock = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 30px 0 0;
+    margin: 50px 0 0;
     :nth-child(2n) {
     flex-direction: row-reverse;
     }
@@ -84,10 +89,11 @@ export const Task = (props: TaskProps) => {
     }
   `;
 
-  const ModalTaskDescription = styled.span`
-    font-size: 15px;
+  const ModalTaskDescription = styled.div`
+    font-size: 18px;
     color: #32325d;
     margin-bottom: 0.2em;
+    padding: 15px;
     @media(max-width: 425px) {
       text-align: center;
       margin-bottom: 30px;
@@ -125,22 +131,22 @@ export const Task = (props: TaskProps) => {
         <ModalTitle>{props.title}</ModalTitle>
         <ModalContentWrapper>
           <ModalText>
-            <h3>Domain: <a href={props.link.url} target="_blank">{props.link.title}</a></h3>
+            <h3>Domain: <Link href={props.link.url} target="_blank">{props.link.title}</Link></h3>
           </ModalText>
             <h3>Project</h3>
-            <span>
-              {props.description[0]}
-            </span>
+            <ModalTaskDescription>
+              {props.goal}
+            </ModalTaskDescription>
+            <ModalTaskDescriptionBlock>
+              <ModalTaskDescription>{props.description[0]}</ModalTaskDescription>
+              <ModalTaskImage src={props.images[0]} alt=""/>
+            </ModalTaskDescriptionBlock>
             <ModalTaskDescriptionBlock>
               <ModalTaskDescription>{props.description[1]}</ModalTaskDescription>
               <ModalTaskImage src={props.images[0]} alt=""/>
             </ModalTaskDescriptionBlock>
             <ModalTaskDescriptionBlock>
               <ModalTaskDescription>{props.description[2]}</ModalTaskDescription>
-              <ModalTaskImage src={props.images[0]} alt=""/>
-            </ModalTaskDescriptionBlock>
-            <ModalTaskDescriptionBlock>
-              <ModalTaskDescription>{props.description[1]}</ModalTaskDescription>
               <ModalTaskImage src={props.images[0]} alt=""/>
             </ModalTaskDescriptionBlock>
         </ModalContentWrapper>

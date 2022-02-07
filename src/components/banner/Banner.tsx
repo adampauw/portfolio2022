@@ -33,11 +33,21 @@ const Banner = styled.div`
     font-family: 'Monoton', cursive;
     @media (max-width: 767px) {
       font-size: 65px;
+      -webkit-animation: pop 5s ease-in-out infinite;
+      -moz-animation: pop 5s ease-in-out infinite;
+      -ms-animation: pop 5s ease-in-out infinite;
+      -o-animation: pop 5s ease-in-out infinite;
+      animation: pop 5s ease-in-out infinite;
+      @keyframes pop {
+          3% { transform: scale(105%); }
+          9% { transform: scale(105%); }
+          12% { transform: scale(100%); }
+      }
     }
   `;
 
   return (
-      <Banner>
+      <Banner id='banner'>
         <Navbar />
         <Title>
           {props.text}

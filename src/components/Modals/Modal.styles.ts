@@ -33,6 +33,10 @@ export const StyledModal = styled.div`
   margin: auto;
   min-height: 90vh;
   border-radius: 16px;
+  @media (max-width: 768px) {
+    height: 100vh;
+    border-radius: 0px;
+  }
 `;
 export const Header = styled.div`
   border-radius: 16px 16px 0 0;

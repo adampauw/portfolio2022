@@ -44,11 +44,12 @@ export const TaskContainer: FC = () => {
 
   return (
       <TaskWrapper>
-        <TaskContainer>
+        <TaskContainer id='work'>
           {
             Projects.map((project: IProject) => (
               <Task 
-                title={project.title} 
+                title={project.title}
+                goal={project.goal}
                 description={project.description} 
                 images={project.images}
                 link={project.link}>
@@ -60,7 +61,8 @@ export const TaskContainer: FC = () => {
           {
             Studies.map((study: IStudy) => (
               <Task 
-                title={study.title} 
+                title={study.title}
+                goal="fix this"
                 description={study.description} 
                 images={study.image}
                 link={study.link}>

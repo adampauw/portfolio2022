@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import VisualContainer from './Visual';
+import VisualContainer from './Avatar';
 import styled from '@emotion/styled';
 import DetailsContainer from './Details';
 import { DARK_WHITE, PURPLE } from '../../Constants/Colours.constants';
@@ -64,7 +64,7 @@ export const Feature = (props: FeatureProps) => {
   `;
 
   return (
-    <FeatureContainer>
+    <FeatureContainer id='about'>
       <div css={css`margin: 0 20px;`}>
         <Feature>
           <DetailsContainer title={props.title} text={props.text}/>
