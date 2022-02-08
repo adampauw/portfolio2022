@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 import Profile from "../../Assets/Images/portrait.png"
 import Ellipse1 from "../../Assets/Images/ellipse1.png"
 import Ellipse2 from "../../Assets/Images/ellipse2.png"
-import Ellipse3 from "../../Assets/Images/ellipse3.png"
 
 export const AvatarContainer = () => {
 

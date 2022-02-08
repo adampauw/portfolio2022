@@ -12,14 +12,12 @@ interface TaskProps extends IProject {
 export const Task = (props: TaskProps) => {
   const Task = styled.div`
     display: flex;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 40px;
-    width: 100%;
-    @media (min-width: 767px) {
-      width: 50%;
-    }
+    width: 50%;
     @media (min-width: 990px) {
       width: 33.3%;
+      padding: 20px;
     }
   `;
 
@@ -44,15 +42,21 @@ export const Task = (props: TaskProps) => {
     flex-direction: column;
     padding: 0 1rem;
     line-height: 1.5em;
+    @media(max-width: 990px) {
+      padding: 0;
+    }
     `;
 
   const TaskTitle = styled.h2`
-    font-size: 25px;
+    font-size: 2vw;
     font-family: 'Zen Kurenaido';
     line-height: 1.1em;
     color: ${PURPLE};
     margin-bottom: 0.2em;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 3.5vw;
+    }
     `;
 
   const Link = styled.a`
