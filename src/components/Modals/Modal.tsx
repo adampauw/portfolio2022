@@ -40,12 +40,10 @@ export const Modal: FunctionComponent<ModalProps> = ({
   
   const modal = (
     <React.Fragment>
-      <Backdrop/>
-      <Wrapper tabIndex={-1} role="dialog"></Wrapper>
       <Wrapper>
-        <StyledModal>
+        <StyledModal onClick={event => event.stopPropagation()}>
           <Header>
-            <CloseButton onClick={hide}><FontAwesomeIcon icon={faSkullCrossbones}/></CloseButton>
+            <CloseButton onClick={hide}><FontAwesomeIcon icon={faSkullCrossbones}/> esc</CloseButton>
           </Header>
           <Content>{modalContent}</Content>
         </StyledModal>

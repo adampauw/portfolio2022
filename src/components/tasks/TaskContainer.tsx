@@ -20,6 +20,9 @@ export const TaskContainer: FC = () => {
     flex-wrap: wrap;
     padding: 0;
     margin: 150px 0;
+    @media(max-width: 767px) {
+      margin: 50px 0;
+    }
   `;
 
   const TaskWrapper = styled.div`
@@ -34,6 +37,9 @@ export const TaskContainer: FC = () => {
     border: 2px solid ${PURPLE};
     margin: 100px auto;
     border-radius: 40%;
+    @media(max-width: 767px) {
+      margin: 50px auto;
+    }
   `;
 
   const Image = styled.img`
