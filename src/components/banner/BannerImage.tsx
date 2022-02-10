@@ -27,7 +27,7 @@ import {
   Plant4,
   Image,
   BannerImageWrapper,
-} from './BannerImage.styles';
+} from './Banner.styles';
 
 export const BannerImage = () => {
   return (

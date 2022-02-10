@@ -1,69 +1,31 @@
 /** @jsx jsx */
 import { FC } from 'react';
-import styled from '@emotion/styled';
-import Task from './Task';
+import TaskComponent from './Task';
 import Footer from '../Footer/Footer';
 import Browser from '../../Assets/Images/browser.png';
 import Books from '../../Assets/Images/books.png';
-import { PURPLE } from '../../Constants/Colours.constants';
 import { css, jsx } from '@emotion/react';
 import { IProject, Projects } from '../../Models/Projects';
 import { IStudy, Studies } from '../../Models/Studies';
+import { TaskContainer, TaskWrapper, Image, Divider } from './Task.styles';
 
-export const TaskContainer: FC = () => {
-  const TaskContainer = styled.div`
-    display: flex;
-    -webkit-display: box;
-    -moz-display: box;
-    -ms-display: flexbox;
-    -webkit-display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 150px 0;
-    @media (max-width: 767px) {
-      margin: 50px 0;
-    }
-  `;
-
-  const TaskWrapper = styled.div`
-    background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
-    padding-bottom: 55px;
-    margin-top: -100px;
-    padding-top: 100px;
-  `;
-
-  const Divider = styled.div`
-    width: 80%;
-    border: 2px solid ${PURPLE};
-    margin: 100px auto;
-    border-radius: 40%;
-    @media (max-width: 767px) {
-      margin: 50px auto;
-    }
-  `;
-
-  const Image = styled.img`
-    width: 100%;
-    height: auto;
-    margin: auto;
-  `;
-
+export const TaskContainerComponent: FC = () => {
   return (
     <TaskWrapper>
       <TaskContainer id="work">
         {Projects.map((project: IProject) => (
-          <Task
+          <TaskComponent
             title={project.title}
             goal={project.goal}
             description={project.description}
             images={project.images}
             link={project.link}>
             <Image src={Browser} />
-          </Task>
+          </TaskComponent>
         ))}
         <Divider />
         {Studies.map((study: IStudy) => (
-          <Task
+          <TaskComponent
             title={study.title}
             goal="fix this"
             description={study.description}
@@ -75,7 +37,7 @@ export const TaskContainer: FC = () => {
                 width: 65%;
               `}
             />
-          </Task>
+          </TaskComponent>
         ))}
       </TaskContainer>
       <Footer />
@@ -83,4 +45,4 @@ export const TaskContainer: FC = () => {
   );
 };
 
-export default TaskContainer;
+export default TaskContainerComponent;
