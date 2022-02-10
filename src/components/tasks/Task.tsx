@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
-import styled from "@emotion/styled";
-import { useModal } from "../Modals/useModal"
-import { Modal } from "../Modals/Modal";
-import { PURPLE } from "../../Constants/Colours.constants";
-import { IProject } from "../../Models/Projects";
+import React, { ReactNode } from 'react';
+import styled from '@emotion/styled';
+import { useModal } from '../Modals/useModal';
+import { Modal } from '../Modals/Modal';
+import { PURPLE } from '../../Constants/Colours.constants';
+import { IProject } from '../../Models/Projects';
 
 interface TaskProps extends IProject {
   children?: ReactNode;
@@ -20,7 +20,6 @@ export const Task = (props: TaskProps) => {
       padding: 20px;
     }
   `;
-
 
   const TaskItem = styled.div`
     display: flex;
@@ -42,10 +41,10 @@ export const Task = (props: TaskProps) => {
     flex-direction: column;
     padding: 0 1rem;
     line-height: 1.5em;
-    @media(max-width: 990px) {
+    @media (max-width: 990px) {
       padding: 0;
     }
-    `;
+  `;
 
   const TaskTitle = styled.h2`
     font-size: 2vw;
@@ -57,7 +56,7 @@ export const Task = (props: TaskProps) => {
     @media (max-width: 768px) {
       font-size: 3.5vw;
     }
-    `;
+  `;
 
   const Link = styled.a`
     color: ${PURPLE};
@@ -83,7 +82,7 @@ export const Task = (props: TaskProps) => {
     justify-content: space-between;
     margin: 50px 0 0;
     :nth-child(2n) {
-    flex-direction: row-reverse;
+      flex-direction: row-reverse;
     }
     @media (max-width: 425px) {
       flex-direction: column;
@@ -98,18 +97,18 @@ export const Task = (props: TaskProps) => {
     color: #32325d;
     margin-bottom: 0.2em;
     padding: 15px;
-    @media(max-width: 425px) {
+    @media (max-width: 425px) {
       text-align: center;
       margin-bottom: 30px;
-    } 
+    }
   `;
 
   const ModalTaskImage = styled.img`
     width: 50%;
-    @media(max-width: 425px) {
+    @media (max-width: 425px) {
       width: 100%;
       margin: auto;
-    } 
+    }
   `;
 
   const ModalContentWrapper = styled.div`
@@ -135,24 +134,27 @@ export const Task = (props: TaskProps) => {
         <ModalTitle>{props.title}</ModalTitle>
         <ModalContentWrapper>
           <ModalText>
-            <h3>Domain: <Link href={props.link.url} target="_blank">{props.link.title}</Link></h3>
+            <h3>
+              Domain:{' '}
+              <Link href={props.link.url} target="_blank">
+                {props.link.title}
+              </Link>
+            </h3>
           </ModalText>
-            <h3>Project</h3>
-            <ModalTaskDescription>
-              {props.goal}
-            </ModalTaskDescription>
-            <ModalTaskDescriptionBlock>
-              <ModalTaskDescription>{props.description[0]}</ModalTaskDescription>
-              <ModalTaskImage src={props.images[0]} alt=""/>
-            </ModalTaskDescriptionBlock>
-            <ModalTaskDescriptionBlock>
-              <ModalTaskDescription>{props.description[1]}</ModalTaskDescription>
-              <ModalTaskImage src={props.images[0]} alt=""/>
-            </ModalTaskDescriptionBlock>
-            <ModalTaskDescriptionBlock>
-              <ModalTaskDescription>{props.description[2]}</ModalTaskDescription>
-              <ModalTaskImage src={props.images[0]} alt=""/>
-            </ModalTaskDescriptionBlock>
+          <h3>Project</h3>
+          <ModalTaskDescription>{props.goal}</ModalTaskDescription>
+          <ModalTaskDescriptionBlock>
+            <ModalTaskDescription>{props.description[0]}</ModalTaskDescription>
+            <ModalTaskImage src={props.images[0]} alt="" />
+          </ModalTaskDescriptionBlock>
+          <ModalTaskDescriptionBlock>
+            <ModalTaskDescription>{props.description[1]}</ModalTaskDescription>
+            <ModalTaskImage src={props.images[0]} alt="" />
+          </ModalTaskDescriptionBlock>
+          <ModalTaskDescriptionBlock>
+            <ModalTaskDescription>{props.description[2]}</ModalTaskDescription>
+            <ModalTaskImage src={props.images[0]} alt="" />
+          </ModalTaskDescriptionBlock>
         </ModalContentWrapper>
       </div>
     </React.Fragment>
@@ -165,11 +167,7 @@ export const Task = (props: TaskProps) => {
           <TaskInfo>
             <TaskTitle>{props.title}</TaskTitle>
             {props.children}
-            <Modal
-              isShown={isShown}
-              hide={toggle}
-              modalContent={content}
-            />
+            <Modal isShown={isShown} hide={toggle} modalContent={content} />
           </TaskInfo>
         </TaskItem>
       </ModalButton>

@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { FC } from "react";
-import styled from "@emotion/styled";
-import Task from "./Task";
-import Footer from "../Footer/Footer";
-import Browser from "../../Assets/Images/browser.png"
-import Books from "../../Assets/Images/books.png"
-import { PURPLE } from "../../Constants/Colours.constants";
-import { css, jsx } from "@emotion/react";
-import { IProject, Projects } from "../../Models/Projects";
-import { IStudy, Studies } from "../../Models/Studies";
+import { FC } from 'react';
+import styled from '@emotion/styled';
+import Task from './Task';
+import Footer from '../Footer/Footer';
+import Browser from '../../Assets/Images/browser.png';
+import Books from '../../Assets/Images/books.png';
+import { PURPLE } from '../../Constants/Colours.constants';
+import { css, jsx } from '@emotion/react';
+import { IProject, Projects } from '../../Models/Projects';
+import { IStudy, Studies } from '../../Models/Studies';
 
 export const TaskContainer: FC = () => {
   const TaskContainer = styled.div`
@@ -20,16 +20,16 @@ export const TaskContainer: FC = () => {
     flex-wrap: wrap;
     padding: 0;
     margin: 150px 0;
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       margin: 50px 0;
     }
   `;
 
   const TaskWrapper = styled.div`
-      background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
-      padding-bottom: 55px;
-      margin-top: -100px;
-      padding-top: 100px;
+    background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
+    padding-bottom: 55px;
+    margin-top: -100px;
+    padding-top: 100px;
   `;
 
   const Divider = styled.div`
@@ -37,47 +37,49 @@ export const TaskContainer: FC = () => {
     border: 2px solid ${PURPLE};
     margin: 100px auto;
     border-radius: 40%;
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       margin: 50px auto;
     }
   `;
 
   const Image = styled.img`
-  width: 100%;
-  height: auto;
-  margin: auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
   `;
 
   return (
-      <TaskWrapper>
-        <TaskContainer id='work'>
-          {
-            Projects.map((project: IProject) => (
-              <Task 
-                title={project.title}
-                goal={project.goal}
-                description={project.description} 
-                images={project.images}
-                link={project.link}>
-                <Image src={Browser}/>
-              </Task>
-
-          ))} 
-          <Divider/>
-          {
-            Studies.map((study: IStudy) => (
-              <Task 
-                title={study.title}
-                goal="fix this"
-                description={study.description} 
-                images={study.image}
-                link={study.link}>
-                <Image src={Books} css={css`width: 65%;`}/>
-              </Task>
-          ))}
-        </TaskContainer>
-        <Footer/>
-      </TaskWrapper>
+    <TaskWrapper>
+      <TaskContainer id="work">
+        {Projects.map((project: IProject) => (
+          <Task
+            title={project.title}
+            goal={project.goal}
+            description={project.description}
+            images={project.images}
+            link={project.link}>
+            <Image src={Browser} />
+          </Task>
+        ))}
+        <Divider />
+        {Studies.map((study: IStudy) => (
+          <Task
+            title={study.title}
+            goal="fix this"
+            description={study.description}
+            images={study.image}
+            link={study.link}>
+            <Image
+              src={Books}
+              css={css`
+                width: 65%;
+              `}
+            />
+          </Task>
+        ))}
+      </TaskContainer>
+      <Footer />
+    </TaskWrapper>
   );
 };
 

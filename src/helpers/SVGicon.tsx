@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-
 export interface ISvgIconProps {
   src: string;
   cssClass?: string;
@@ -14,7 +13,6 @@ interface ISvgIconState {
   loadedSvg: any;
 }
 
-
 export class SvgIcon extends React.Component<ISvgIconProps, ISvgIconState> {
   private hasUnMounted: boolean = false;
 
@@ -22,7 +20,7 @@ export class SvgIcon extends React.Component<ISvgIconProps, ISvgIconState> {
     super(props);
     this.state = {
       loadedSvg: null,
-    }
+    };
     this.loadSVGFromProps();
   }
 
@@ -31,27 +29,29 @@ export class SvgIcon extends React.Component<ISvgIconProps, ISvgIconState> {
   }
 
   protected loadSVGFromProps = () => {
-    fetch(this.props.src)
-      .then(response => {
-        if (response) {
-          response.text().then(text => {
-            if (this.hasUnMounted) return;
-            this.setState({
-              loadedSvg: text,
-            });
+    fetch(this.props.src).then((response) => {
+      if (response) {
+        response.text().then((text) => {
+          if (this.hasUnMounted) return;
+          this.setState({
+            loadedSvg: text,
           });
-        }
-      });
-  }
+        });
+      }
+    });
+  };
 
   render() {
     return (
-      <div className={this.props.cssClass} dangerouslySetInnerHTML={{ __html: this.state.loadedSvg }}
+      <div
+        className={this.props.cssClass}
+        dangerouslySetInnerHTML={{ __html: this.state.loadedSvg }}
         style={{
           ...this.props.style,
           fill: this.props.color ? this.props.color : 'white',
-          stroke: this.props.stroke ? this.props.stroke : 'black'
-        }} />
-    )
+          stroke: this.props.stroke ? this.props.stroke : 'black',
+        }}
+      />
+    );
   }
 }

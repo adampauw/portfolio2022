@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { WHITE } from "../../Constants/Colours.constants";
+import React from 'react';
+import styled from '@emotion/styled';
+import { WHITE } from '../../Constants/Colours.constants';
 
 interface DetailsProps {
   text: string[];
@@ -24,10 +24,9 @@ export const DetailsContainer = (props: DetailsProps) => {
     min-height: 1px;
     padding: 50px 0;
     z-index: 2;
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       width: 90%;
     }
-
   `;
 
   const TextContainer = styled.div`
@@ -54,7 +53,7 @@ export const DetailsContainer = (props: DetailsProps) => {
     color: ${WHITE};
     font-size: 25px;
     line-height: 35px;
-    @media(min-width: 769px) {
+    @media (min-width: 769px) {
       text-align: left;
     }
   `;

@@ -1,19 +1,18 @@
 /* @jsx jsx */
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 // eslint-disable-next-line
-import { jsx } from "@emotion/core";
-import {WHITE} from '../../Constants/Colours.constants'
-import { BannerImage } from "./BannerImage";
-import { Navbar } from "../Navbar/Navbar";
+import { jsx } from '@emotion/core';
+import { WHITE } from '../../Constants/Colours.constants';
+import { BannerImage } from './BannerImage';
+import { Navbar } from '../Navbar/Navbar';
 
 interface BannerProps {
   text: string;
 }
 
 export const Banner = (props: BannerProps) => {
-
-const Banner = styled.div`
+  const Banner = styled.div`
     width: 100%;
     position: relative;
     background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
@@ -39,21 +38,25 @@ const Banner = styled.div`
       -o-animation: pop 5s ease-in-out infinite;
       animation: pop 5s ease-in-out infinite;
       @keyframes pop {
-          3% { transform: scale(105%); }
-          9% { transform: scale(105%); }
-          12% { transform: scale(100%); }
+        3% {
+          transform: scale(105%);
+        }
+        9% {
+          transform: scale(105%);
+        }
+        12% {
+          transform: scale(100%);
+        }
       }
     }
   `;
 
   return (
-      <Banner id='banner'>
-        <Navbar />
-        <Title>
-          {props.text}
-        </Title>
-          <BannerImage />
-      </Banner>
+    <Banner id="banner">
+      <Navbar />
+      <Title>{props.text}</Title>
+      <BannerImage />
+    </Banner>
   );
 };
 

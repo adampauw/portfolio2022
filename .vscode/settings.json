@@ -1,3 +1,4 @@
 {
-  "editor.gotoLocation.multipleTypeDefinitions": "goto"
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.formatOnSave": true
 }

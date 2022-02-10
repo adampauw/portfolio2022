@@ -1,12 +1,8 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import TaskContainer from "./tasks/TaskContainer";
-import Home from "./Home/Home";
+import TaskContainer from './tasks/TaskContainer';
+import Home from './Home/Home';
 
 const App: React.FC = () => {
   return (

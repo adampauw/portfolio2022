@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
   height: 90%;
   outline: 0;
   @media (max-width: 767px) {
-      width: 100%;
-      height: 100%;
-    }
+    width: 100%;
+    height: 100%;
+  }
   @media (min-width: 1024px) {
-      width: 95%;
-    }
+    width: 95%;
+  }
 `;
 export const Backdrop = styled.div`
   position: fixed;
@@ -58,15 +58,21 @@ export const CloseButton = styled.button`
     cursor: pointer;
   }
   -webkit-animation: spin 5s ease-in-out infinite;
-    -moz-animation: spin 5s ease-in-out infinite;
-    -ms-animation: spin 5s ease-in-out infinite;
-    -o-animation: spin 5s ease-in-out infinite;
-    animation: spin 5s ease-in-out infinite;
-    @keyframes spin {
-        96% { transform: rotate(0deg); }
-        98% { transform: rotate(-20deg); }
-        100% { transform: rotate(0deg); }
+  -moz-animation: spin 5s ease-in-out infinite;
+  -ms-animation: spin 5s ease-in-out infinite;
+  -o-animation: spin 5s ease-in-out infinite;
+  animation: spin 5s ease-in-out infinite;
+  @keyframes spin {
+    96% {
+      transform: rotate(0deg);
     }
+    98% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 `;
 export const Content = styled.div`
   height: 90vh;

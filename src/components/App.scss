@@ -1,40 +1,36 @@
+.svg {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  height: 60%;
+  margin-left: -30%;
+  width: 60%;
+  margin-top: -30%;
+  opacity: 0.9;
+}
 
-  .svg {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    height: 60%;
-    margin-left: -30%;
-    width: 60%;
-    margin-top: -30%;
-    opacity: 0.9;
+.clear-mobile {
+  @media (max-width: 767px) {
+    display: none;
   }
+}
 
-  .clear-mobile {
-    @media(max-width: 767px) {
-      display: none;
-    }
-  }
+h1 {
+  font-weight: 100;
+}
 
-  h1 {
-    font-weight: 100;
-  }
-
-  body {
-    font-family: 'Zen Kurenaido', sans-serif;
-  }
+body {
+  font-family: 'Zen Kurenaido', sans-serif;
+}
 
 // Mobile
 
-  .header-img svg {
-    width: 70%;
-    height: auto;
-    margin-bottom: 40px;
-  }
-  .footer-img svg {
-    width: 90%;
-    height: auto;
-  }
-
-
-
+.header-img svg {
+  width: 70%;
+  height: auto;
+  margin-bottom: 40px;
+}
+.footer-img svg {
+  width: 90%;
+  height: auto;
+}
