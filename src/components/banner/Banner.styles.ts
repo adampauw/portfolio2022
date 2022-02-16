@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
 import { WHITE } from '../../Constants/Colours.constants';
+import { GRADIENT } from '../../Constants/CSS.constants';
 
 // Banner Styles
 
 export const BannerWrapper = styled.div`
   width: 100%;
   position: relative;
-  background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
+  background: ${GRADIENT};
   padding: 0 60px;
   margin: -100px 0 -100px 0;
   padding: 100px 0;
@@ -20,7 +21,7 @@ export const Title = styled.h1`
   margin: 0 auto 40px;
   padding-top: 50px;
   font-size: 80px;
-  font-family: 'Monoton', cursive;
+  font-family: 'Monoton';
   @media (max-width: 767px) {
     font-size: 65px;
     -webkit-animation: pop 5s ease-in-out infinite;
@@ -71,7 +72,7 @@ export const Cloud1 = styled.div`
   -webkit-animation: slide 20s ease-in-out infinite;
   -moz-animation: slide 20s ease-in-out infinite;
   -ms-animation: slide 20s ease-in-out infinite;
-  -o-animation: slide 2s ease-in-out infinite;
+  -o-animation: slide 20s ease-in-out infinite;
   animation: slide 20s ease-in-out infinite;
   @keyframes slide {
     50% {
@@ -187,10 +188,10 @@ export const Plant4 = styled.div`
   top: 40%;
   left: 6%;
   z-index: 101;
-  -webkit-animation: rotate 5s ease-in-out infinite;
-  -moz-animation: rotate 5s ease-in-out infinite;
-  -ms-animation: rotate 5s ease-in-out infinite;
-  -o-animation: rotate 5s ease-in-out infinite;
+  -webkit-animation: rotate 10s ease-in-out infinite;
+  -moz-animation: rotate 10s ease-in-out infinite;
+  -ms-animation: rotate 10s ease-in-out infinite;
+  -o-animation: rotate 10s ease-in-out infinite;
   animation: rotate 10s ease-in-out infinite;
   transform-origin: bottom;
   @keyframes rotate {

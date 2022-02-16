@@ -24,7 +24,7 @@ export const TaskContainerComponent: FC = () => {
           </TaskComponent>
         ))}
         <Divider />
-        {Studies.map((study: IStudy) => (
+        {Studies.map((study: IStudy, index) => (
           <TaskComponent
             title={study.title}
             goal="fix this"

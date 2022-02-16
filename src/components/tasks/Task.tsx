@@ -38,18 +38,14 @@ export const TaskComponent = (props: TaskProps) => {
           </ModalText>
           <h3>Project</h3>
           <ModalTaskDescription>{props.goal}</ModalTaskDescription>
-          <ModalTaskDescriptionBlock>
-            <ModalTaskDescription>{props.description[0]}</ModalTaskDescription>
-            <ModalTaskImage src={props.images[0]} alt="" />
-          </ModalTaskDescriptionBlock>
-          <ModalTaskDescriptionBlock>
-            <ModalTaskDescription>{props.description[1]}</ModalTaskDescription>
-            <ModalTaskImage src={props.images[0]} alt="" />
-          </ModalTaskDescriptionBlock>
-          <ModalTaskDescriptionBlock>
-            <ModalTaskDescription>{props.description[2]}</ModalTaskDescription>
-            <ModalTaskImage src={props.images[0]} alt="" />
-          </ModalTaskDescriptionBlock>
+          {props.description.map((key, index) => {
+            return (
+              <ModalTaskDescriptionBlock>
+                <ModalTaskDescription>{props.description[index]}</ModalTaskDescription>
+                <ModalTaskImage src={props.images[index]} alt="" />
+              </ModalTaskDescriptionBlock>
+            );
+          })}
         </ModalContentWrapper>
       </div>
     </React.Fragment>

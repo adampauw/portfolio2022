@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { DARK_WHITE, WHITE } from '../../Constants/Colours.constants';
+import { DARK_WHITE, PURPLE, WHITE } from '../../Constants/Colours.constants';
+import { FONT_SIZE_NORMAL } from '../../Constants/UI.constants';
 
 export const FooterWrapper = styled.div`
   display: -webkit-box;
@@ -11,7 +12,7 @@ export const FooterWrapper = styled.div`
   margin: 0 55px;
   padding: 40px 60px;
   border-radius: 8px 8px 8px 100px;
-  background-color: #17062b;
+  background-color: ${PURPLE};
   @media (max-width: 767px) {
     margin: 5px;
     padding: 30px 40px;
@@ -28,7 +29,7 @@ export const TextContainer = styled.div`
 export const Link = styled.a`
   margin-top: 16px;
   color: ${WHITE};
-  font-size: 20px;
+  font-size: ${FONT_SIZE_NORMAL};
   line-height: 22px;
   font-weight: 300;
   text-decoration: none;

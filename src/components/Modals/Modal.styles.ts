@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import { WHITE } from '../../Constants/Colours.constants';
+import { FONT_SIZE_LARGE } from '../../Constants/UI.constants';
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -28,7 +30,7 @@ export const Backdrop = styled.div`
 `;
 export const StyledModal = styled.div`
   z-index: 200;
-  background: white;
+  background: ${WHITE};
   position: relative;
   margin: auto;
   min-height: 90vh;
@@ -45,12 +47,11 @@ export const Header = styled.div`
   padding: 0.3rem;
 `;
 export const HeaderText = styled.div`
-  color: #fff;
+  color: ${WHITE};
   align-self: center;
-  color: lightgray;
 `;
 export const CloseButton = styled.button`
-  font-size: 1.5rem;
+  font-size: ${FONT_SIZE_LARGE};
   border: none;
   border-radius: 3px;
   background: none;

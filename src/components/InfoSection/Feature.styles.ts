@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { DARK_WHITE, PURPLE } from '../../Constants/Colours.constants';
+import { FONT_SIZE_LARGE } from '../../Constants/UI.constants';
 
 export const FeatureContainer = styled.div`
   background-color: ${PURPLE};
@@ -33,7 +34,7 @@ export const FeatureContainer = styled.div`
     height: 200px;
     width: 100px;
     border-bottom-left-radius: 100px;
-    box-shadow: 0 100px 0 0 #17062b;
+    box-shadow: 0 100px 0 0 ${PURPLE};
     z-index: 1;
   }
 `;
@@ -48,5 +49,5 @@ export const Feature = styled.div`
 export const Languages = styled.div`
   color: ${DARK_WHITE};
   margin: 0 5%;
-  font-size: 22px;
+  font-size: ${FONT_SIZE_LARGE};
 `;

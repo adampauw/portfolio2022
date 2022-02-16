@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { PURPLE } from '../../Constants/Colours.constants';
+import { GRADIENT } from '../../Constants/CSS.constants';
+import { FONT_SIZE_NORMAL } from '../../Constants/UI.constants';
 
 // Task Container styles
 export const TaskContainer = styled.div`
@@ -17,7 +19,7 @@ export const TaskContainer = styled.div`
 `;
 
 export const TaskWrapper = styled.div`
-  background: linear-gradient(149deg, #967baf 0%, #d5c2cd 40%);
+  background: ${GRADIENT};
   padding-bottom: 55px;
   margin-top: -100px;
   padding-top: 100px;
@@ -38,8 +40,8 @@ export const Image = styled.img`
   height: auto;
   margin: auto;
 `;
-// Task styles
 
+// Task styles
 export const Task = styled.div`
   display: flex;
   padding: 10px;
@@ -102,7 +104,7 @@ export const ModalButton = styled.button`
 export const ModalTitle = styled.h2`
   font-size: 32px;
   line-height: 1.1em;
-  color: #32325d;
+  color: ${PURPLE};
   margin: 0 0 50px;
   text-align: center;
 `;
@@ -123,8 +125,8 @@ export const ModalTaskDescriptionBlock = styled.div`
 `;
 
 export const ModalTaskDescription = styled.div`
-  font-size: 18px;
-  color: #32325d;
+  font-size: ${FONT_SIZE_NORMAL};
+  color: ${PURPLE};
   margin-bottom: 0.2em;
   padding: 15px;
   @media (max-width: 425px) {

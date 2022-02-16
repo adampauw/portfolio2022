@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
+import { PURPLE, WHITE } from '../../Constants/Colours.constants';
+import { FONT_SIZE_NORMAL } from '../../Constants/UI.constants';
 
 export const Link = styled.a`
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: ${FONT_SIZE_NORMAL};
   letter-spacing: 2px;
 `;
 
@@ -12,8 +14,8 @@ export const LinkContent = styled.div`
   align-items: center;
   padding-left: 15px;
   justify-content: flex-start;
-  background-color: #ffffff;
-  color: #2c3e50;
+  background-color: ${WHITE};
+  color: ${PURPLE};
   border: none;
   border-radius: 30px;
   width: 100px;
@@ -25,7 +27,7 @@ export const LinkContent = styled.div`
   z-index: 100;
   @media (min-width: 767px) {
     &:hover {
-      background-color: #ffffff;
+      background-color: ${WHITE};
       position: fixed;
       right: -50px;
       width: 200px;
@@ -37,7 +39,7 @@ export const LinkContent = styled.div`
     }
   }
   svg {
-    font-size: 20px;
-    margin-right: 15%;
+    font-size: ${FONT_SIZE_NORMAL};
+    margin-right: 20%;
   }
 `;

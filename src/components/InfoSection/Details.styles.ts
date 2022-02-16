@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { WHITE } from '../../Constants/Colours.constants';
+import { FONT_SIZE_LARGE, FONT_SIZE_LARGER } from '../../Constants/UI.constants';
 
 export const Details = styled.div`
   webkit-box-orient: vertical;
@@ -36,7 +37,7 @@ export const TextContainer = styled.div`
 
 export const Text = styled.div`
   color: ${WHITE};
-  font-size: 22px;
+  font-size: ${FONT_SIZE_LARGE};
   line-height: 24px;
   display: flex;
   text-align: left;
@@ -44,7 +45,7 @@ export const Text = styled.div`
 
 export const Title = styled.h1`
   color: ${WHITE};
-  font-size: 25px;
+  font-size: ${FONT_SIZE_LARGER};
   line-height: 35px;
   @media (min-width: 769px) {
     text-align: left;
