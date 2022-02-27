@@ -42,7 +42,7 @@ export const Text = styled.span`
   padding-left: 10px;
 `;
 
-export const Image = styled.img`
+export const Plant = styled.div`
   width: 25%;
   object-fit: scale-down;
   -webkit-animation: pop 5s ease-in-out infinite;

@@ -2,11 +2,11 @@
 import React from 'react';
 // eslint-disable-next-line
 import { jsx } from '@emotion/core';
-import Plant2 from '../../Assets/Images/plant2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import { FooterWrapper, Link, TextContainer, Text, Image } from './Footer.styles';
+import { FooterWrapper, Link, TextContainer, Text, Plant } from './Footer.styles';
+import { Image } from '../Image/Image';
 
 export const Footer = (props: any) => {
   return (
@@ -25,7 +25,9 @@ export const Footer = (props: any) => {
           <Text>Email</Text>
         </Link>
       </TextContainer>
-      <Image src={Plant2} />
+      <Plant>
+        <Image url={'plant2'} />
+      </Plant>
     </FooterWrapper>
   );
 };

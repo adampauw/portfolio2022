@@ -200,7 +200,3 @@ export const Plant4 = styled.div`
     }
   }
 `;
-export const Image = styled.img`
-  width: 100%;
-  height: auto;
-`;

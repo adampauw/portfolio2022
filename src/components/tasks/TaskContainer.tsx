@@ -2,12 +2,11 @@
 import { FC } from 'react';
 import TaskComponent from './Task';
 import Footer from '../Footer/Footer';
-import Browser from '../../Assets/Images/browser.png';
-import Books from '../../Assets/Images/books.png';
-import { css, jsx } from '@emotion/react';
+import { jsx } from '@emotion/react';
 import { IProject, Projects } from '../../Models/Projects';
 import { IStudy, Studies } from '../../Models/Studies';
-import { TaskContainer, TaskWrapper, Image, Divider } from './Task.styles';
+import { TaskContainer, TaskWrapper, Divider, ImageWrapper } from './Task.styles';
+import { Image } from '../Image/Image';
 
 export const TaskContainerComponent: FC = () => {
   return (
@@ -20,7 +19,9 @@ export const TaskContainerComponent: FC = () => {
             description={project.description}
             images={project.images}
             link={project.link}>
-            <Image src={Browser} />
+            <ImageWrapper>
+              <Image url={'browser'} />
+            </ImageWrapper>
           </TaskComponent>
         ))}
         <Divider />
@@ -31,12 +32,9 @@ export const TaskContainerComponent: FC = () => {
             description={study.description}
             images={study.image}
             link={study.link}>
-            <Image
-              src={Books}
-              css={css`
-                width: 65%;
-              `}
-            />
+            <ImageWrapper>
+              <Image url={'books'} width="65%" />
+            </ImageWrapper>
           </TaskComponent>
         ))}
       </TaskContainer>

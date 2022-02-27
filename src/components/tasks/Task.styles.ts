@@ -35,7 +35,7 @@ export const Divider = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const ImageWrapper = styled.div`
   width: 100%;
   height: auto;
   margin: auto;
@@ -47,6 +47,9 @@ export const Task = styled.div`
   padding: 10px;
   margin-bottom: 40px;
   width: 50%;
+  &:focus-visible {
+    outline: none;
+  }
   @media (min-width: 990px) {
     width: 33.3%;
     padding: 20px;
@@ -135,11 +138,12 @@ export const ModalTaskDescription = styled.div`
   }
 `;
 
-export const ModalTaskImage = styled.img`
-  width: 50%;
+export const ModalTaskImage = styled.div`
+  max-width: 50%;
+  margin: auto;
   @media (max-width: 425px) {
     width: 100%;
-    margin: auto;
+    max-width: 100%;
   }
 `;
 

@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { AvatarImageProps } from './Avatar';
 
 export const Avatar = styled.div`
 display: grid;
@@ -15,7 +14,7 @@ width: 30%;
 }
 `;
 
-export const AvatarImage = styled.img<AvatarImageProps>`
+export const AvatarImage = styled.div`
   padding: 15px;
   grid-row-start: 1;
   grid-column-start: 1;
