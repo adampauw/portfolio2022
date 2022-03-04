@@ -18,7 +18,8 @@ export const TaskContainerComponent: FC = () => {
             goal={project.goal}
             description={project.description}
             images={project.images}
-            link={project.link}>
+            link={project.link}
+            learnings={project.learnings}>
             <ImageWrapper>
               <Image url={'browser'} />
             </ImageWrapper>

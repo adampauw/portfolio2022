@@ -11,7 +11,7 @@ export const Navbar: FC = (props: any) => {
       <Link href="#banner">
         <LinkContent
           css={css`
-            top: 20px;
+            top: 10px;
             @media (max-width: 767px) {
               top: 120px;
             }
@@ -23,7 +23,7 @@ export const Navbar: FC = (props: any) => {
       <Link href="#about">
         <LinkContent
           css={css`
-            top: 80px;
+            top: 60px;
             @media (max-width: 767px) {
               top: 180px;
             }
@@ -35,7 +35,7 @@ export const Navbar: FC = (props: any) => {
       <Link href="#work">
         <LinkContent
           css={css`
-            top: 140px;
+            top: 110px;
             @media (max-width: 767px) {
               top: 240px;
             }

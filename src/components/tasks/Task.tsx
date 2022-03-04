@@ -18,7 +18,7 @@ import {
 } from './Task.styles';
 import { Image } from '../Image/Image';
 
-interface TaskProps extends IProject {
+interface TaskProps extends Partial<IProject> {
   children?: ReactNode;
 }
 
@@ -32,19 +32,19 @@ export const TaskComponent = (props: TaskProps) => {
           <ModalText>
             <h3>
               Domain:{' '}
-              <Link href={props.link.url} target="_blank">
-                {props.link.title}
+              <Link href={props.link?.url} target="_blank">
+                {props.link?.title}
               </Link>
             </h3>
           </ModalText>
           <h3>Project</h3>
           <ModalTaskDescription>{props.goal}</ModalTaskDescription>
-          {props.images.map((key, index) => {
+          {props.images?.map((key, index) => {
             return (
               <ModalTaskDescriptionBlock>
-                <ModalTaskDescription>{props.description[index]}</ModalTaskDescription>
+                <ModalTaskDescription>{props.description![index]}</ModalTaskDescription>
                 <ModalTaskImage>
-                  <Image url={props.images[index]} />
+                  <Image url={props.images![index]} />
                 </ModalTaskImage>
               </ModalTaskDescriptionBlock>
             );

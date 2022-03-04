@@ -41,6 +41,7 @@ export const Text = styled.div`
   line-height: 24px;
   display: flex;
   text-align: left;
+  margin: 3% 0;
 `;
 
 export const Title = styled.h1`
