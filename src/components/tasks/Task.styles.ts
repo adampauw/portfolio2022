@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { PURPLE } from '../../Constants/Colours.constants';
+import { LIGHT_GREY, PURPLE } from '../../Constants/Colours.constants';
 import { GRADIENT } from '../../Constants/CSS.constants';
 import { FONT_SIZE_NORMAL } from '../../Constants/UI.constants';
 
@@ -130,17 +130,28 @@ export const ModalTaskDescriptionBlock = styled.div`
 export const ModalTaskDescription = styled.div`
   font-size: ${FONT_SIZE_NORMAL};
   color: ${PURPLE};
+  display: flex;
+  align-items: center;
   margin-bottom: 0.2em;
   padding: 15px;
+  width: 50%;
   @media (max-width: 425px) {
     text-align: center;
     margin-bottom: 30px;
   }
 `;
 
+export const ModalTaskObjective = styled(ModalTaskDescription)`
+  width: 100%;
+`;
+
 export const ModalTaskImage = styled.div`
   max-width: 50%;
   margin: auto;
+  img {
+    border-radius: 16px;
+    border: 1px solid ${LIGHT_GREY};
+  }
   @media (max-width: 425px) {
     width: 100%;
     max-width: 100%;

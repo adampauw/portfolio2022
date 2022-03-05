@@ -8,6 +8,7 @@ import {
   ModalTitle,
   Link,
   ModalTaskDescription,
+  ModalTaskObjective,
   ModalTaskDescriptionBlock,
   ModalTaskImage,
   Task,
@@ -38,7 +39,7 @@ export const TaskComponent = (props: TaskProps) => {
             </h3>
           </ModalText>
           <h3>Project</h3>
-          <ModalTaskDescription>{props.goal}</ModalTaskDescription>
+          <ModalTaskObjective>{props.goal}</ModalTaskObjective>
           {props.images?.map((key, index) => {
             return (
               <ModalTaskDescriptionBlock>
@@ -49,6 +50,8 @@ export const TaskComponent = (props: TaskProps) => {
               </ModalTaskDescriptionBlock>
             );
           })}
+          <h3>Key Learnings</h3>
+          <ModalTaskObjective>{props.learnings}</ModalTaskObjective>
         </ModalContentWrapper>
       </div>
     </React.Fragment>
