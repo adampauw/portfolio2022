@@ -38,8 +38,12 @@ export const TaskComponent = (props: TaskProps) => {
               </Link>
             </h3>
           </ModalText>
-          <h3>Project</h3>
-          <ModalTaskObjective>{props.goal}</ModalTaskObjective>
+          {props.goal && (
+            <>
+              <h3>Project</h3>
+              <ModalTaskObjective>{props.goal}</ModalTaskObjective>
+            </>
+          )}
           {props.images?.map((key, index) => {
             return (
               <ModalTaskDescriptionBlock>
@@ -50,8 +54,12 @@ export const TaskComponent = (props: TaskProps) => {
               </ModalTaskDescriptionBlock>
             );
           })}
-          <h3>Key Learnings</h3>
-          <ModalTaskObjective>{props.learnings}</ModalTaskObjective>
+          {props.learnings && (
+            <>
+              <h3>Key Learnings</h3>
+              <ModalTaskObjective>{props.learnings}</ModalTaskObjective>
+            </>
+          )}
         </ModalContentWrapper>
       </div>
     </React.Fragment>

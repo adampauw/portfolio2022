@@ -29,7 +29,6 @@ export const TaskContainerComponent: FC = () => {
         {Studies.map((study: IStudy, index) => (
           <TaskComponent
             title={study.title}
-            goal="fix this"
             description={study.description}
             images={study.image}
             link={study.link}>
