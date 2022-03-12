@@ -25,7 +25,7 @@ export const Studies: IStudy[] = [
     description: [
       'This course will guide you through combining HTML, CSS, and JavaScript to make exciting interactive sites! The concepts covered in this course lay the foundation for adding interactivity to websites and can help you bridge the gap between learning JavaScript principles and actually applying JavaScript to real web development projects. Take-Away Skills Learn about the DOM architecture and manipulation, browser events and handlers, as well as a new web templating framework Handlebars.js.',
     ],
-    image: ['browser'],
+    image: ['codeAcademy'],
     link: {
       title: 'CodeAcademy',
       url: 'https://www.codecademy.com/learn/build-interactive-websites',

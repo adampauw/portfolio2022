@@ -39,15 +39,16 @@ export const Projects: IProject[] = [
   },
   {
     title: 'Neo Events',
-    goal: 'Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue.',
+    goal: 'For context Fitogram pro is a studio managment software which in 2020 we decided to rewrite into a project called Neo (see NEO(FE rewrite)). A major feature in the software is the ability for the user to create events, for example a Yin Yoga class every Tuesday at 5pm. Currently the user can do this on Fitogram Pro but not on our new Neo version which will soon replace Fitogram Pro entirely and this feature will be a big leap towards acheiving that goal',
     description: [
-      'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
-      'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
-      'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.',
+      'Although this feature was a large one we were still able to base the functionality off of Pros current implementation since it would be using all the same APIs. That said everything about the UI/UX was completely redesigned and we gave it much more detailed validation and error handling this time. Additionally since we would be writing this all from scratch we needed to design ways to re-use this process and its components to create other features in our software such as products and contracts etc. To achieve this we held many Front-end meetings on design architecture until we all agreed upon what we figured as the cleanest solution',
+      'A main driver for us was user experience so we focused a lot on making it very clear which fields were mandatory, validation with error messages describing which data needed correcting as well as pre filling out information for the user based on what our Business Intelligence team said was the most common values. To do this we created some helper functions to evaluate which fields had been filled out and if the values were appropriate. In this example we check if they are creating a Free Training (drop in swimming, gym etc.) and if so check a more limited set of inputs otherwise we include more such as the start time being before the end time',
+      'There is a growing subset of users in the software that had to be handled a little bit differently than the average user. These users dont have access to the full software so many flows needed to be tweaked to either show or hide event creation inputs as well as adjust our validation logic to allow normally mandatory fields to be option for them. Lastly we needed to create fallback values to send to the creation endpoint if the data was returing null due to the fields being hidden, we did this within a custom hook built to manage event creation and had it align with existing validation',
     ],
-    images: ['browser', 'browser', 'browser'],
+    images: ['event-neo-1', 'event-neo-2', 'event-neo-3'],
     link: { title: 'Fitogram', url: 'www.fitogram.de' },
-    learnings: '',
+    learnings:
+      'Ive learned that sometimes the greatest measure of success is silence in regards to complaints and bug tickets and this project was a huge success in that regard. We developed a complex and heavily used feature and after release there was only one minor bug which was fixed promptly. Upon reflection this was due to a couple factors such as working on the much cleaner code base of the Neo Project which gave us the freedom to build cleaner components and run reliable tests, also the high level of QA we put this feature through before release had an influence on the end product',
   },
   {
     title: 'Import Feature',
