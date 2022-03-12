@@ -20,7 +20,7 @@ export const Projects: IProject[] = [
       'While this project is large and will still take a number of quarters to achieve completely we have so far been able to release a solid mobile MVP and have begun releasing desktop features as well thus allowing desktop users to access NEO bringing us closer to making the full switch away from our Pro software',
     ],
     images: ['neo-roadmap', 'neo-structure', 'neo'],
-    link: { title: 'Fitogram', url: 'www.neo.fitogram.pro' },
+    link: { title: 'Fitogram', url: 'www.fitogram.de' },
     learnings:
       'This project has shown me how to plan a high level projects architecture from the ground up as well as exposed me to a ton of best practices and conventions I was not previously familiar with',
   },
@@ -45,7 +45,7 @@ export const Projects: IProject[] = [
       'A main driver for us was user experience so we focused a lot on making it very clear which fields were mandatory, validation with error messages describing which data needed correcting as well as pre filling out information for the user based on what our Business Intelligence team said was the most common values. To do this we created some helper functions to evaluate which fields had been filled out and if the values were appropriate. In this example we check if they are creating a Free Training (drop in swimming, gym etc.) and if so check a more limited set of inputs otherwise we include more such as the start time being before the end time',
       'There is a growing subset of users in the software that had to be handled a little bit differently than the average user. These users dont have access to the full software so many flows needed to be tweaked to either show or hide event creation inputs as well as adjust our validation logic to allow normally mandatory fields to be option for them. Lastly we needed to create fallback values to send to the creation endpoint if the data was returing null due to the fields being hidden, we did this within a custom hook built to manage event creation and had it align with existing validation',
     ],
-    images: ['event-neo-1', 'event-neo-2', 'event-neo-3'],
+    images: ['neo-event-1', 'neo-event-2', 'neo-event-3'],
     link: { title: 'Fitogram', url: 'www.fitogram.de' },
     learnings:
       'Ive learned that sometimes the greatest measure of success is silence in regards to complaints and bug tickets and this project was a huge success in that regard. We developed a complex and heavily used feature and after release there was only one minor bug which was fixed promptly. Upon reflection this was due to a couple factors such as working on the much cleaner code base of the Neo Project which gave us the freedom to build cleaner components and run reliable tests, also the high level of QA we put this feature through before release had an influence on the end product',
@@ -59,7 +59,7 @@ export const Projects: IProject[] = [
       'Lastly we needed to show the progress of an import as well as a history of previous and failed imports. If an import failed you would have the chance to review it and fix the errors before trying the upload again. Every import was given a unique ID which would differentiate and catalogue all the different test also every user was able to retrieve a list of all their imports via a GET call using their user ID. We displayed these via this call and were able to evaluate the test status data via a custom hook so that we could display the progress, status, import date. Again everything written is completely adaptive so when the other import types are finished being developed on the back end they will work out of the box on our front end',
     ],
     images: ['neo-import1', 'neo-import2', 'neo-import3'],
-    link: { title: 'Fitogram', url: 'www.neo.fitogram.pro' },
+    link: { title: 'Fitogram', url: 'www.fitogram.de' },
     learnings:
       'This project taught me how to parse through large amounts of data and also to design more elegantly reusable components. However most important thing I learned on this project was that I am capable of doing things I didnt think I was, many of the concepts and skills involved were brand new to me and since the other front end dev on my team was on holidays for a majority of this feature I had to dig deep and grow as a developer. So while this may not be the softwares largest or most used feature it was something I am proud I was such a big part of',
   },
