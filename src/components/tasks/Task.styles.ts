@@ -119,7 +119,7 @@ export const ModalTaskDescriptionBlock = styled.div`
   :nth-child(2n) {
     flex-direction: row-reverse;
   }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     :nth-child(2n) {
       flex-direction: column;
@@ -135,9 +135,11 @@ export const ModalTaskDescription = styled.div`
   margin-bottom: 0.2em;
   padding: 15px;
   width: 50%;
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     text-align: center;
     margin-bottom: 30px;
+    width: 100%;
+    padding: 0;
   }
 `;
 
@@ -152,7 +154,7 @@ export const ModalTaskImage = styled.div`
     border-radius: 16px;
     border: 1px solid ${LIGHT_GREY};
   }
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     width: 100%;
     max-width: 100%;
   }
@@ -164,6 +166,7 @@ export const ModalContentWrapper = styled.div`
   padding: 30px;
   flex-direction: column;
   @media (max-width: 426px) {
+    padding: 10px;
   }
 `;
 
@@ -171,5 +174,12 @@ export const ModalText = styled.div`
   width: 40%;
   @media (max-width: 426px) {
     width: 100%;
+  }
+`;
+
+export const ModalHeading = styled.h3`
+  @media (max-width: 426px) {
+    display: flex;
+    justify-content: center;
   }
 `;

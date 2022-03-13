@@ -68,7 +68,7 @@ export const CloseButton = styled.button`
       transform: rotate(0deg);
     }
     98% {
-      transform: rotate(-20deg);
+      transform: rotate(-10deg);
     }
     100% {
       transform: rotate(0deg);

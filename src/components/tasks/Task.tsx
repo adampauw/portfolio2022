@@ -16,6 +16,7 @@ import {
   TaskItem,
   TaskInfo,
   TaskTitle,
+  ModalHeading,
 } from './Task.styles';
 import { Image } from '../Image/Image';
 
@@ -31,16 +32,16 @@ export const TaskComponent = (props: TaskProps) => {
         <ModalTitle>{props.title}</ModalTitle>
         <ModalContentWrapper>
           <ModalText>
-            <h3>
+            <ModalHeading>
               Domain:{' '}
               <Link href={props.link?.url} target="_blank">
                 {props.link?.title}
               </Link>
-            </h3>
+            </ModalHeading>
           </ModalText>
           {props.goal && (
             <>
-              <h3>Project</h3>
+              <ModalHeading>Project</ModalHeading>
               <ModalTaskObjective>{props.goal}</ModalTaskObjective>
             </>
           )}
@@ -56,7 +57,7 @@ export const TaskComponent = (props: TaskProps) => {
           })}
           {props.learnings && (
             <>
-              <h3>Key Learnings</h3>
+              <ModalHeading>Key Learnings</ModalHeading>
               <ModalTaskObjective>{props.learnings}</ModalTaskObjective>
             </>
           )}
