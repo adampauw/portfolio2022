@@ -98,7 +98,7 @@ export const Projects: IProject[] = [
       'The more I planned this project out the more I realized how many images I could have and when I add more projects over time that will continue to grow. To avoid this slowing down my sites page load times I turned to Cloudinary to host all my images and serve them to me whenever I request them which really simplifies the process and has reduced the bundle size significantly. This here is a simple component I created that I used whenever I had an image to display. It queries my Cloudinary account and inserts the image I want to retrieve based on a prop passed into it. So for this image right here I just had to import Image with the prop "portfolio-3" and easy as pie Ive got an image of my Image. There were a few scenarios when 100% was not an ideal width such as the picture of me with the circles around it and in these cases, I added a custom width, this just avoids having to add redundant classnames all returning almost the same styles',
     ],
     images: ['portfolio-1', 'portfolio-2', 'portfolio-3'],
-    link: { title: 'Adam Pauw', url: 'www.adampauw.com' },
+    link: { title: 'GitHub', url: 'https://github.com/adampauw/portfolio2022' },
     learnings:
       'The biggest learning while building this was how much I appreciate having a design team to supply the answers and designs I need when building features at my job. Its one thing to build something based on designs and documented functionality but to create from scratch is another ballgame entirely. I easily spent over half the time designing and deliberating and if anything this project has made me really appreciate how much work my wifes job as a UX/UI designer entails',
   },

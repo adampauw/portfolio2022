@@ -2,7 +2,7 @@
   "name": "AdamsPortfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://adampauw.github.io/x",
+  "homepage": "http://adampauw.github.io/portfolio2022",
   "dependencies": {
     "@emotion/core": "^10.0.21",
     "@emotion/react": "^11.7.1",
