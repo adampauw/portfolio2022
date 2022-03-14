@@ -2,7 +2,7 @@
   "name": "AdamsPortfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://adampauw.github.io/portfolio2022",
+  "homepage": "http://adampauw.com",
   "dependencies": {
     "@emotion/core": "^10.0.21",
     "@emotion/react": "^11.7.1",
@@ -26,12 +26,12 @@
     "typescript": "3.7"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "prettier:check": "prettier --list-different 'src/**/*.scss' 'src/**/*.{js,jsx,ts,tsx}'",
     "prettier:fix": "prettier --write 'src/**/*.scss' 'src/**/*.{js,jsx,ts,tsx}'"
   },
@@ -52,6 +52,6 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.2.0"
   }
 }
