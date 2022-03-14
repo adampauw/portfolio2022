@@ -2,7 +2,7 @@
   "name": "AdamsPortfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://adampauw.com",
+  "homepage": "www.adampauw.com",
   "dependencies": {
     "@emotion/core": "^10.0.21",
     "@emotion/react": "^11.7.1",
