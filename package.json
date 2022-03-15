@@ -2,7 +2,7 @@
   "name": "AdamsPortfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "www.adampauw.com",
+  "homepage": "https://adampauw.com",
   "dependencies": {
     "@emotion/core": "^10.0.21",
     "@emotion/react": "^11.7.1",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
