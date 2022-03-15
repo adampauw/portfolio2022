@@ -3,7 +3,7 @@
 #### Description:
 
 A portfolio of my works and career thusfar as a Front End Developer<br>
-Live version can be seen [here](www.adampauw.com)
+Live version can be seen [here](https://www.adampauw.com/)
 
 ### `npm start`
 
