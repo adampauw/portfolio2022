@@ -13,14 +13,14 @@ export interface IProject {
 export const Projects: IProject[] = [
   {
     title: 'Neo (FE rewrite)',
-    goal: 'Our objective was to completely re-write our front end from scratch in a project called Neo Pro. FitogramPro is a comprehensive studio management software that was written as most tech startups are, in a fast-paced as long as it works ship it mentality. This led to many issues with deeply interconnected components, unpredictable bugs, and slow development times. We wanted to transition from a monolithic codebase to a much more maintainable one and reduce the amount of interdependency found throughout the software. Moreover, we had proven that over 60% of our users accessed the software via a mobile device and having a codebase rooted in the mobile-first approach would ensure a higher quality experience overall',
+    goal: 'Our objective was to completely re-write our front end from scratch in a project called Neo. FitogramPro is a comprehensive studio management software that was written as most tech startups are, in a fast-paced as long as it works ship it mentality. This led to many issues with deeply interconnected components, unpredictable bugs, and slow development times. We wanted to transition from a monolithic codebase to a much more maintainable one and reduce the amount of interdependency found throughout the software. Moreover, we had proven that over 60% of our users accessed the software via a mobile device and having a codebase rooted in the mobile-first approach would ensure a higher quality experience overall',
     description: [
       'The first step was to create a Roadmap so all departments could plan their resources accordingly. With Product and Management, we agreed on a viable MVP which began to redirect all mobile users to our new NEO domain. From there we started developing core features from Pro and temporarily filling in the gaps with iFrames or custom Pro components adapted for Neo',
       'Next up was architecture, as Neo would only be worked on by a few developers at first it was important to establish a solid foundation that would be easy to understand and follow as more devs joined in on the project. We discussed things like Folder structure, Component designs, and naming practices. We decided to do away with the wrapper container practices we had in pro and create custom hooks if the component required special logic and import this from a separate file, as well as for deciding to only use named exports. Using MUI was a topic in these meetings as well and we agreed to use it but wrap each MUI component in our own wrapper which would give us the control to customize the output',
       'While this project is large and will still take several quarters to achieve completely we have so far been able to release a solid mobile MVP and have begun releasing desktop features as well thus allowing desktop users to access NEO bringing us closer to making the full switch away from our Pro software',
     ],
     images: ['neo-roadmap', 'neo-structure', 'neo'],
-    link: { title: 'Fitogram', url: 'www.fitogram.de' },
+    link: { title: 'Fitogram', url: 'https://www.fitogram.pro/' },
     learnings:
       'This project has shown me how to plan a high-level projects architecture from the ground up as well as exposed me to a ton of best practices and conventions I was not previously familiar with',
   },
@@ -33,7 +33,7 @@ export const Projects: IProject[] = [
       'Overall this migration was a large success. Our software became more responsive, load times decreased and the codebase became measurably smaller. Within our first couple weeks of releasing the migrated components we saw bug tickets and load times decrease and our NPS score rise. Of course, other teams were migrating to other microservices as well which aided in the overall prosperity enjoyed from this project',
     ],
     images: ['event-migrate1', 'event-migrate2', 'event-migrate3'],
-    link: { title: 'Fitogram', url: 'www.fitogram.de' },
+    link: { title: 'Fitogram', url: 'https://www.fitogram.pro/' },
     learnings:
       'Oddly enough up until this point, I had very few tasks related to APIs, and when we were told this is our next big task I was a bit nervous. Getting into this task however, I learned a ton about how they work and how simple they are and it gave me a confidence that I have carried forward to subsequent projects',
   },
@@ -46,7 +46,7 @@ export const Projects: IProject[] = [
       'There is a growing subset of users in the software that had to be handled a little bit differently than the average user. These users dont have access to the full software so many flows needed to be tweaked to either show or hide event creation inputs as well as adjust our validation logic to allow normally mandatory fields to be an option for them. Lastly, we needed to create fallback values to send to the creation endpoint if the data was returning null due to the fields being hidden, we did this within a custom hook built to manage event creation and had it align with existing validation',
     ],
     images: ['neo-event-1', 'neo-event-2', 'neo-event-3'],
-    link: { title: 'Fitogram', url: 'www.fitogram.de' },
+    link: { title: 'Fitogram', url: 'https://www.fitogram.pro/' },
     learnings:
       'Ive learned that sometimes the greatest measure of success is silence in regards to complaints and bug tickets and this project was a huge success in that regard. We developed a complex and heavily used feature and after release, there was only one minor bug which was fixed promptly. Upon reflection this was due to a couple of factors such as working on the much cleaner code base of the Neo Project which gave us the freedom to build cleaner components and run reliable tests, also the high level of QA we put this feature through before release influenced the end product',
   },
@@ -59,7 +59,7 @@ export const Projects: IProject[] = [
       'Lastly, we needed to show the progress of an import as well as a history of previous and failed imports. If an import failed you would have the chance to review it and fix the errors before trying the upload again. Every import was given a unique ID that would differentiate and catalog all the different tests also every user was able to retrieve a list of all their imports via a GET call using their user ID. We displayed these via this call and were able to evaluate the test status data via a custom hook so that we could display the progress, status, import date. Again everything written is completely adaptive so when the other import types are finished being developed on the back end they will work out of the box on our front end',
     ],
     images: ['neo-import1', 'neo-import2', 'neo-import3'],
-    link: { title: 'Fitogram', url: 'www.fitogram.de' },
+    link: { title: 'Fitogram', url: 'https://www.fitogram.pro/' },
     learnings:
       'This project taught me how to parse through large amounts of data and also to design more elegantly reusable components. However, the most important thing I learned on this project was that I am capable of doing things I didnt think I was, many of the concepts and skills involved were brand new to me and since the other front end dev on my team was on holiday for a majority of this feature I had to dig deep and grow as a developer. So while this may not be the softwares largest or most used feature it was something I am proud I was such a big part of',
   },
@@ -85,7 +85,7 @@ export const Projects: IProject[] = [
       'To centralize our designs and avoid duplicated components being created with every feature among a growing team of developers we introduced Storybook into the software. Storybook allowed us to preview all the components we were using in our UI without having to integrate them into any kind of project. It ran locally as well as on an Amazon Server. It allowed for the rapid development of new UI elements, and fast distribution across our different products. It helped designers as it enables them to play around with CSS styles in Storybooks web-editor, it allowed other developers to check the properties of each component and see how they behaved, and also provided hints and code on how to use and implement each component',
     ],
     images: ['ui-1', 'ui-2', 'ui-3'],
-    link: { title: 'Fitogram', url: 'www.fitogram.de' },
+    link: { title: 'Fitogram', url: 'https://www.fitogram.pro/' },
     learnings:
       'We knew how tightly intertwined our software had become and a major hurdle in the project was to attempt to decouple components or re-write them entirely. Something as simple as moving a date-time picker up and beside the title would turn into a day of refactoring components just to enable the right props to reach the right place. I learned how important architecture planning is before starting software of this complexity and how entangled a software could become if no structure was established at the foundation. Of course, I also got to learn how to resolve these kinds of issues efficiently',
   },

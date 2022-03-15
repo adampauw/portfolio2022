@@ -2,22 +2,7 @@ import React, { ReactNode } from 'react';
 import { useModal } from '../Modals/useModal';
 import { Modal } from '../Modals/Modal';
 import { IProject } from '../../Models/Projects';
-import {
-  ModalContentWrapper,
-  ModalText,
-  ModalTitle,
-  Link,
-  ModalTaskDescription,
-  ModalTaskObjective,
-  ModalTaskDescriptionBlock,
-  ModalTaskImage,
-  Task,
-  ModalButton,
-  TaskItem,
-  TaskInfo,
-  TaskTitle,
-  ModalHeading,
-} from './Task.styles';
+import * as TaskStyles from './Task.styles';
 import { Image } from '../Image/Image';
 
 interface TaskProps extends Partial<IProject> {
@@ -29,55 +14,57 @@ export const TaskComponent = (props: TaskProps) => {
   const content = (
     <React.Fragment>
       <div className="modal-content-wrapper">
-        <ModalTitle>{props.title}</ModalTitle>
-        <ModalContentWrapper>
-          <ModalText>
-            <ModalHeading>
+        <TaskStyles.ModalTitle>{props.title}</TaskStyles.ModalTitle>
+        <TaskStyles.ModalContentWrapper>
+          <TaskStyles.ModalText>
+            <TaskStyles.ModalHeading>
               Domain:{' '}
-              <Link href={props.link?.url} target="_blank">
+              <TaskStyles.Link href={props.link?.url} target="_blank">
                 {props.link?.title}
-              </Link>
-            </ModalHeading>
-          </ModalText>
+              </TaskStyles.Link>
+            </TaskStyles.ModalHeading>
+          </TaskStyles.ModalText>
           {props.goal && (
             <>
-              <ModalHeading>Project</ModalHeading>
-              <ModalTaskObjective>{props.goal}</ModalTaskObjective>
+              <TaskStyles.ModalHeading>Project</TaskStyles.ModalHeading>
+              <TaskStyles.ModalTaskObjective>{props.goal}</TaskStyles.ModalTaskObjective>
             </>
           )}
           {props.images?.map((key, index) => {
             return (
-              <ModalTaskDescriptionBlock>
-                <ModalTaskDescription>{props.description![index]}</ModalTaskDescription>
-                <ModalTaskImage>
+              <TaskStyles.ModalTaskDescriptionBlock>
+                <TaskStyles.ModalTaskDescription>
+                  {props.description![index]}
+                </TaskStyles.ModalTaskDescription>
+                <TaskStyles.ModalTaskImage>
                   <Image url={props.images![index]} />
-                </ModalTaskImage>
-              </ModalTaskDescriptionBlock>
+                </TaskStyles.ModalTaskImage>
+              </TaskStyles.ModalTaskDescriptionBlock>
             );
           })}
           {props.learnings && (
             <>
-              <ModalHeading>Key Learnings</ModalHeading>
-              <ModalTaskObjective>{props.learnings}</ModalTaskObjective>
+              <TaskStyles.ModalHeading>Key Learnings</TaskStyles.ModalHeading>
+              <TaskStyles.ModalTaskObjective>{props.learnings}</TaskStyles.ModalTaskObjective>
             </>
           )}
-        </ModalContentWrapper>
+        </TaskStyles.ModalContentWrapper>
       </div>
     </React.Fragment>
   );
 
   return (
-    <Task>
-      <ModalButton onClick={toggle}>
-        <TaskItem>
-          <TaskInfo>
-            <TaskTitle>{props.title}</TaskTitle>
+    <TaskStyles.Task>
+      <TaskStyles.ModalButton onClick={toggle}>
+        <TaskStyles.TaskItem>
+          <TaskStyles.TaskInfo>
+            <TaskStyles.TaskTitle>{props.title}</TaskStyles.TaskTitle>
             {props.children}
             <Modal isShown={isShown} hide={toggle} modalContent={content} />
-          </TaskInfo>
-        </TaskItem>
-      </ModalButton>
-    </Task>
+          </TaskStyles.TaskInfo>
+        </TaskStyles.TaskItem>
+      </TaskStyles.ModalButton>
+    </TaskStyles.Task>
   );
 };
 
