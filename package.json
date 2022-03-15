@@ -1,0 +1,57 @@
+{
+  "name": "AdamsPortfolio",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://adampauw.com",
+  "dependencies": {
+    "@emotion/core": "^10.0.21",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^10.0.17",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.2.0",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.5",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "cloudinary-react": "^1.7.1",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.5.1",
+    "react": "^16.9.0",
+    "react-device-detect": "^1.11.14",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^5.0.0",
+    "typescript": "3.7"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier:check": "prettier --list-different 'src/**/*.scss' 'src/**/*.{js,jsx,ts,tsx}'",
+    "prettier:fix": "prettier --write 'src/**/*.scss' 'src/**/*.{js,jsx,ts,tsx}'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.7",
+    "gh-pages": "^2.2.0"
+  }
+}
