@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Wrapper, Header, StyledModal, CloseButton, Content } from './Modal.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
+import { isMobile } from '../../Helpers/deviceDetect';
 
 export interface ModalProps {
   isShown: boolean;
@@ -31,7 +32,7 @@ export const Modal: FunctionComponent<ModalProps> = ({ isShown, hide, modalConte
         <StyledModal onClick={(event) => event.stopPropagation()}>
           <Header>
             <CloseButton onClick={hide}>
-              <FontAwesomeIcon icon={faSkullCrossbones} /> close
+              <FontAwesomeIcon icon={faSkullCrossbones} /> {isMobile() ? 'back' : 'close'}
             </CloseButton>
           </Header>
           <Content>{modalContent}</Content>

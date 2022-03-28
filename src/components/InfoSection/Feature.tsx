@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import VisualContainer from './Avatar';
+import AvatarContainer from './Avatar';
 import DetailsContainer from './Details';
 import { css, jsx } from '@emotion/core';
 import { Feature, FeatureContainer, Languages } from './Feature.styles';
@@ -19,7 +19,7 @@ export const FeatureComponent = (props: FeatureProps) => {
         `}>
         <Feature>
           <DetailsContainer title={props.title} text={props.text} />
-          <VisualContainer />
+          <AvatarContainer />
         </Feature>
         <Languages>
           React | Typescript | Javascript | Redux | Mobx | MaterialUI | EmotionJs | Scss |

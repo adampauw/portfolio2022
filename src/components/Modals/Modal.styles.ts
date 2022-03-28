@@ -44,7 +44,7 @@ export const Header = styled.div`
   border-radius: 16px 16px 0 0;
   display: flex;
   justify-content: space-between;
-  padding: 0.3rem;
+  padding: 0.5rem;
 `;
 export const HeaderText = styled.div`
   color: ${WHITE};

@@ -19,7 +19,7 @@ export const Details = styled.div`
   padding: 50px 0;
   z-index: 2;
   @media (max-width: 767px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 
@@ -42,6 +42,9 @@ export const Text = styled.div`
   display: flex;
   text-align: left;
   margin: 3% 0;
+  @media (max-width: 426px) {
+    text-align: center;
+  }
 `;
 
 export const Title = styled.h1`

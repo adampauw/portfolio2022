@@ -7,7 +7,8 @@ align-items: center;
 width: 30%;
 }
 @media(max-width: 767px) {
-  display: none;
+  width: 100%;
+  z-index: 100;
 }
 @media(min-width: 2560px) {
   width: 20%;

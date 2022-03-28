@@ -23,7 +23,6 @@ export const FeatureContainer = styled.div`
   align-items: center;
   @media (max-width: 767px) {
     margin-top: 30px;
-    padding-right: 10px;
     min-height: 200px;
   }
   &:before {
@@ -44,6 +43,9 @@ export const Feature = styled.div`
   margin: 30px 0;
   flex-direction: row;
   justify-content: space-around;
+  @media (max-width: 426px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const Languages = styled.div`
