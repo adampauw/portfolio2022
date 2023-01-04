@@ -23,7 +23,7 @@ export const FeatureComponent = (props: FeatureProps) => {
         </Feature>
         <Languages>
           React | Typescript | Javascript | Redux | Mobx | MaterialUI | EmotionJs | Scss |
-          Kubernetes | REST | Jest | Enzyme
+          Kubernetes | REST | Jest | NextJs | GraphQl
         </Languages>
       </div>
     </FeatureContainer>

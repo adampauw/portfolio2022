@@ -13,7 +13,35 @@ export interface IProject {
 
 export const Projects: IProject[] = [
   {
-    title: 'Software Rewrite',
+    title: 'Ecommerce site',
+    goal: 'To build an Ecommerce site that will promote and sell my electrolytes for a side business I have recently started building. It will interact directly with shopify for the fullfillment side of things. I also wanted to better my understanding of NextJs and GraphQl. ',
+    description: [
+      'Since I had not used Next before and time was a constraint I forked a project to avoid set up issues. In hindsight since I deleted about 99% of the forked project I would have been better of starting from scratch. I also added EmotionJs for creating styled components and added some Jest tests using Enzyme.',
+      'The product selection page includes three flavours all with the option of sugar or no sugar, once the quantity is selected I implimented two ways for the data to link to shopify. Since I was not ready to start paying for a shopify account to verify which method I needed I simply pepared both options. One sends the data as params in the route and the other way calls an endpoint loading a GraphQl object with the selected items',
+      'Other features include a scaling slider that displays how many packages a customer might need based on their weekly workout schedule. Still to implement will be more tests, hosting the images on cloudinary, setting up lighthouse and creating a backend to store my product data.',
+    ],
+    images: ['tenacle-1', 'tenacle-2', 'tenacle-3'],
+    thumbnail: 'tenacle',
+    link: { title: 'Tenacle', url: 'https://www.tenacle.ca' },
+    learnings:
+      'I learned a lot about GraphQl and Next during this project such as how intuative GraphQl can be and how much it simplfies API calls. Also how nexts file structure can be so crucial to pages displaying or not which was a fun little bug to solve. Both these were things which are something I have been wanting to explore for a while now and I am happy to say I will continue to use them going forward.',
+  },
+  {
+    title: 'Google Calendar',
+    goal: 'To create a calendar similar to Googles that will give the customers a day and week overview of all their events/classes',
+    description: [
+      'I started this feature off by trying to think of how to layout items using position: absolute which would react and change based on the other divs around them. This hurt my brain for awhile until I created a few hooks to map out every event in arrays of arrays and then check for conflicting time slots and adjust the styling of the events in conflict accordingly. I also added a hover effect for when events shared space with other events making the information was illegible.',
+      'Afterwards I created a simple timeline divider which would move up and down the day depending on the current local time. Any events in the past were then faded out to avoid confusion.',
+      'The filter menu will add or remove events based on the selected options and I cant actually take credit for as it was implemented by my colleague Mykola Voropinov shortly after I left the company but I thought it was really nicely done',
+    ],
+    images: ['calendar-1', 'calendar-2', 'calendar-3'],
+    thumbnail: 'calendar',
+    link: { title: 'Fitogram', url: 'https://www.fitogram.pro/' },
+    learnings:
+      'My first year as a developer I watched a colleague build a calendar for the old version of Fitogram Pro and all I remember thinking is wow that looks impossible to figure out. So in being tasked to develop this feature it helped me understand how far my capabilities have come over the years and to not look at such grand features as daunting anymore.',
+  },
+  {
+    title: 'FrontEnd Rewrite',
     goal: 'Our objective was to completely re-write our front end from scratch in a project called Neo. FitogramPro is a comprehensive studio management software that was written as most tech startups are, in a fast-paced as long as it works mentality. This led to many issues with deeply interconnected components, unpredictable bugs, and slow development times. We wanted to transition from a monolithic codebase to a much more maintainable one and reduce the amount of interdependency found throughout the software. Moreover, we had proven that over 60% of our users accessed the software via a mobile device and having a codebase rooted in the mobile-first approach would ensure a higher quality experience overall.',
     description: [
       'The first step was to create a Roadmap so all departments could plan their resources accordingly. With Product and Management, we agreed on a viable MVP which began to redirect all mobile users to our new NEO domain. From there we started developing core features from Pro and temporarily filling in the gaps with iFrames or custom Pro components adapted for Neo.',
